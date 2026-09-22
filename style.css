@@ -1,0 +1,417 @@
+/* Myanglish to မြန်မာစာ — red lacquerware, gold kanote, palm-leaf manuscript */
+
+:root {
+  --lacquer: #6B1510;
+  --lacquer-deep: #2B0806;
+  --lacquer-black: #1C0B08;
+  --gold: #D6A93F;
+  --gold-soft: #F0D58A;
+  --leaf: #E8CF96;
+  --leaf-edge: #C9A763;
+  --ink: #2B1709;
+  --cream: #F7EBD0;
+  --cream-dim: #D9C4A0;
+
+  --font-latin: "Marcellus", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mm: "Noto Serif Myanmar", "Noto Sans Myanmar", "Myanmar Text", Padauk, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--lacquer-deep); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--cream);
+  font-family: var(--font-ui);
+  background: var(--lacquer-deep);
+}
+
+/* Fixed backdrop layers (background-attachment: fixed is unreliable on mobile) */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 18%, rgba(160, 42, 28, 0.55), transparent 70%),
+    radial-gradient(ellipse 120% 60% at 50% 110%, rgba(214, 169, 63, 0.18), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='112' viewBox='0 0 112 112'%3E %3Cg fill='none' stroke='%23D6A93F' stroke-width='1' stroke-linecap='round'%3E %3Cpath d='M56 0 L112 56 L56 112 L0 56 Z' opacity='.38'/%3E %3Cpath d='M56 8 L104 56 L56 104 L8 56 Z' opacity='.25'/%3E %3Cg opacity='.7'%3E %3Cpath d='M56 56 C48 48 49 38 56 30 C63 38 64 48 56 56 Z'/%3E %3Cpath d='M56 56 C48 64 49 74 56 82 C63 74 64 64 56 56 Z'/%3E %3Cpath d='M56 56 C48 48 38 49 30 56 C38 63 48 64 56 56 Z'/%3E %3Cpath d='M56 56 C64 48 74 49 82 56 C74 63 64 64 56 56 Z'/%3E %3Cpath d='M56 30 C52 24 55 18 60 19 C63 20 62 24 59 24'/%3E %3Cpath d='M56 82 C60 88 57 94 52 93 C49 92 50 88 53 88'/%3E %3Cpath d='M30 56 C24 60 18 57 19 52 C20 49 24 50 24 53'/%3E %3Cpath d='M82 56 C88 52 94 55 93 60 C92 63 88 62 88 59'/%3E %3C/g%3E %3Ccircle cx='56' cy='56' r='3' opacity='.8'/%3E %3Cg opacity='.45'%3E %3Ccircle cx='0' cy='0' r='5'/%3E%3Ccircle cx='112' cy='0' r='5'/%3E %3Ccircle cx='0' cy='112' r='5'/%3E%3Ccircle cx='112' cy='112' r='5'/%3E %3Cpath d='M0 12 C8 12 12 8 12 0 M112 12 C104 12 100 8 100 0 M0 100 C8 100 12 104 12 112 M112 100 C104 100 100 104 100 112'/%3E %3C/g%3E %3C/g%3E%3C/svg%3E") center top / 112px 112px,
+    linear-gradient(180deg, var(--lacquer) 0%, #561009 55%, var(--lacquer-deep) 100%);
+}
+
+/* soften the pattern toward the edges so the centre reads as the lit surface */
+body::after {
+  background: radial-gradient(ellipse 60% 70% at 50% 40%, transparent 30%, rgba(43, 8, 6, 0.62) 100%);
+}
+
+.skyline {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(110px, 22vh, 240px);
+  pointer-events: none;
+  z-index: 0;
+}
+.sky-far  { fill: #3E0C08; opacity: 0.85; }
+.sky-near { fill: #1F0605; }
+.sky-band path { stroke: rgba(214, 169, 63, 0.35); stroke-width: 1.2; fill: none; }
+.sky-gold { fill: var(--gold); opacity: 0.9; }
+
+button, textarea { font: inherit; }
+
+.shell {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0 clamp(150px, 26vh, 280px);
+}
+
+/* ---------- masthead */
+
+.masthead { text-align: center; margin-bottom: 36px; }
+
+.kicker {
+  margin: 0 0 0.35em;
+  font-family: var(--font-latin);
+  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  letter-spacing: 0.04em;
+  color: var(--gold-soft);
+}
+
+h1 {
+  margin: 0;
+  padding-top: 0.42em;
+  font-family: var(--font-mm);
+  font-weight: 700;
+  font-size: clamp(3.4rem, 11vw, 6.6rem);
+  line-height: 1.35;
+  color: var(--cream);
+  text-shadow: 0 2px 0 rgba(43, 8, 6, 0.55), 0 0 42px rgba(214, 169, 63, 0.25);
+}
+
+.band {
+  width: min(320px, 70%);
+  height: 14px;
+  margin: 2px auto 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='14' viewBox='0 0 40 14'%3E %3Cg fill='none' stroke='%23D6A93F' stroke-width='1.1' stroke-linecap='round'%3E %3Cpath d='M0 7 C6 1 14 1 20 7 C26 13 34 13 40 7'/%3E %3Cpath d='M20 7 C17 4 18 1 21 2' /%3E%3Cpath d='M0 7 C3 10 2 13 -1 12'/%3E%3Cpath d='M40 7 C37 10 38 13 41 12'/%3E %3Ccircle cx='10' cy='7' r='1.3' fill='%23D6A93F' stroke='none'/%3E%3Ccircle cx='30' cy='7' r='1.3' fill='%23D6A93F' stroke='none'/%3E %3C/g%3E%3C/svg%3E") center / 40px 14px repeat-x;
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+}
+
+.subtitle {
+  max-width: 34em;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--cream-dim);
+}
+
+.status {
+  display: inline-block;
+  margin: 18px 0 0;
+  padding: 6px 14px;
+  border: 1px solid rgba(214, 169, 63, 0.4);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+  background: rgba(28, 11, 8, 0.45);
+}
+.status.ready { color: var(--gold-soft); border-color: rgba(214, 169, 63, 0.7); }
+.status.error { color: #FFD2C4; border-color: #E0735A; background: rgba(90, 16, 10, 0.8); }
+
+/* ---------- converter */
+
+/* converter on the left, word choices + rules on the right */
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  gap: 28px;
+  align-items: start;
+}
+
+.converter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px 10px;
+}
+
+.panel-head label {
+  font-family: var(--font-latin);
+  font-size: 1.2rem;
+}
+.leaf .panel-head label { font-family: var(--font-mm); font-weight: 600; font-size: 1.1rem; }
+
+textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 240px;
+  resize: vertical;
+  outline: none;
+  border: 0;
+}
+
+/* black lacquer tablet with a gold rim */
+.lacquer textarea {
+  padding: 22px 22px;
+  border-radius: 16px;
+  color: var(--cream);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.06), transparent 40%),
+    var(--lacquer-black);
+  box-shadow:
+    inset 0 0 0 1px rgba(214, 169, 63, 0.75),
+    inset 0 0 0 5px var(--lacquer-black),
+    inset 0 0 0 6px rgba(214, 169, 63, 0.3),
+    0 18px 40px rgba(20, 3, 2, 0.55);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  caret-color: var(--gold);
+}
+.lacquer textarea::placeholder { color: rgba(247, 235, 208, 0.32); }
+
+/* palm-leaf manuscript: straw leaf, fibre lines, two string holes */
+.leaf textarea {
+  padding: 26px 56px;
+  border-radius: 22px / 50%;
+  color: var(--ink);
+  font-family: var(--font-mm);
+  font-size: 1.45rem;
+  line-height: 2;
+  background:
+    radial-gradient(circle at 26px 50%, var(--lacquer-deep) 0 5px, var(--leaf-edge) 5.5px 7px, transparent 7.5px),
+    radial-gradient(circle at calc(100% - 26px) 50%, var(--lacquer-deep) 0 5px, var(--leaf-edge) 5.5px 7px, transparent 7.5px),
+    repeating-linear-gradient(180deg, transparent 0 7px, rgba(120, 82, 30, 0.08) 7px 8px),
+    linear-gradient(180deg, #F0DCA8 0%, var(--leaf) 45%, #DDBF80 100%);
+  box-shadow:
+    inset 0 0 0 1px var(--leaf-edge),
+    inset 0 -10px 24px rgba(140, 95, 35, 0.22),
+    0 18px 40px rgba(20, 3, 2, 0.55);
+}
+.leaf textarea::placeholder { color: rgba(43, 23, 9, 0.35); }
+
+/* ---------- side panel */
+
+.helper {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 20px 20px 16px;
+  border-radius: 16px;
+  background: rgba(28, 11, 8, 0.88);
+  box-shadow: inset 0 0 0 1px rgba(214, 169, 63, 0.55), 0 18px 40px rgba(20, 3, 2, 0.5);
+  scrollbar-color: rgba(214, 169, 63, 0.5) transparent;
+}
+
+.helper h2,
+.helper summary {
+  margin: 0 0 12px;
+  font-family: var(--font-latin);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--gold-soft);
+}
+
+.helper section + section,
+.helper details { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(214, 169, 63, 0.25); }
+
+.cand-word { font-family: var(--font-latin); color: var(--cream); }
+
+.cand-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+
+.cand {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  grid-template-areas: "num mm typing" "num note note";
+  align-items: baseline;
+  column-gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+}
+.cand:hover:not(:disabled) { background: rgba(214, 169, 63, 0.1); border-color: rgba(214, 169, 63, 0.4); }
+.cand:disabled { cursor: default; opacity: 0.8; }
+.cand.is-current { background: rgba(214, 169, 63, 0.14); border-color: rgba(214, 169, 63, 0.7); }
+
+.cand-num {
+  grid-area: num;
+  align-self: center;
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 169, 63, 0.6);
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+}
+.cand-mm { grid-area: mm; font-family: var(--font-mm); font-size: 1.35rem; line-height: 1.7; color: var(--cream); }
+.cand-typing { grid-area: typing; font-family: var(--font-latin); font-size: 1rem; color: var(--gold); }
+.cand-note { grid-area: note; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
+
+.hint { margin: 10px 0 0; font-size: 0.82rem; line-height: 1.5; color: var(--cream-dim); }
+
+kbd {
+  font-family: var(--font-latin);
+  padding: 0 5px;
+  border: 1px solid rgba(214, 169, 63, 0.5);
+  border-radius: 4px;
+  color: var(--gold-soft);
+}
+
+/* rules cheat-sheet */
+.rule-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.rule-list li { display: grid; grid-template-columns: 5.5em 1fr; gap: 10px; align-items: baseline; font-size: 0.9rem; }
+.rule-list .typed { font-family: var(--font-latin); color: var(--gold); }
+.rule-list .mm { font-family: var(--font-mm); font-size: 1.15rem; line-height: 1.6; }
+.rule-note { margin: 12px 0 6px; font-size: 0.84rem; line-height: 1.5; color: var(--cream-dim); }
+
+.rule-table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 0.86rem; }
+.rule-table th {
+  font-family: var(--font-latin); font-weight: 400; color: var(--gold-soft);
+  text-align: left; padding: 4px 6px; border-bottom: 1px solid rgba(214, 169, 63, 0.3);
+}
+.rule-table td { padding: 3px 6px; border-bottom: 1px solid rgba(214, 169, 63, 0.1); }
+.rule-table td.mm { font-family: var(--font-mm); font-size: 1.05rem; }
+.rule-table td.typed { font-family: var(--font-latin); color: var(--gold); }
+
+.helper details summary { cursor: pointer; margin: 0; }
+.helper details[open] summary { margin-bottom: 12px; }
+.helper details details { margin-top: 12px; padding-top: 0; border-top: 0; }
+.helper details details summary { font-size: 0.95rem; }
+
+.lookalike { padding: 8px 0; border-bottom: 1px solid rgba(214, 169, 63, 0.12); }
+.lookalike:last-child { border-bottom: 0; }
+.lookalike-row { display: grid; grid-template-columns: 3.2em 4.6em 1fr; gap: 8px; align-items: baseline; font-size: 0.86rem; }
+.lookalike-row .mm { font-family: var(--font-mm); font-size: 1.15rem; line-height: 1.6; }
+.lookalike-row .typed { font-family: var(--font-latin); color: var(--gold); }
+.lookalike-row .note { color: var(--cream-dim); }
+
+/* ---------- buttons */
+
+button {
+  cursor: pointer;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(214, 169, 63, 0.55);
+  border-radius: 999px;
+  padding: 7px 16px;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+button:hover { background: rgba(214, 169, 63, 0.14); border-color: var(--gold); }
+button:active { transform: translateY(1px); }
+
+.ghost { font-size: 0.88rem; padding: 4px 14px; color: var(--gold-soft); }
+.ghost.done { background: var(--gold); color: var(--lacquer-black); border-color: var(--gold); }
+
+:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+.lacquer textarea:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 2px var(--gold),
+    inset 0 0 0 5px var(--lacquer-black),
+    inset 0 0 0 6px rgba(214, 169, 63, 0.5),
+    0 0 0 4px rgba(214, 169, 63, 0.2),
+    0 18px 40px rgba(20, 3, 2, 0.55);
+}
+.leaf textarea:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 4px; }
+
+/* ---------- examples */
+
+.examples { margin-top: 44px; text-align: center; }
+
+.examples h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-latin);
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--gold-soft);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chips button {
+  background: rgba(28, 11, 8, 0.55);
+  font-size: 0.95rem;
+  padding: 8px 16px;
+}
+
+footer {
+  max-width: 36em;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--cream-dim);
+}
+footer p { margin: 0; }
+
+/* ---------- one load moment: the leaf settles in */
+
+@media (prefers-reduced-motion: no-preference) {
+  .leaf { animation: leaf-in 700ms cubic-bezier(.2, .7, .2, 1) 120ms both; }
+  @keyframes leaf-in {
+    from { opacity: 0; transform: translateY(10px) rotate(-0.6deg); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+/* ---------- small screens */
+
+@media (max-width: 1000px) {
+  .workspace { grid-template-columns: 1fr; }
+  .helper { position: static; max-height: none; }
+}
+
+@media (max-width: 860px) {
+  .converter { grid-template-columns: 1fr; }
+  .converter { gap: 22px; }
+  textarea { min-height: 170px; }
+  .leaf textarea { padding: 22px 48px; font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+  .shell { padding-top: 40px; }
+  .leaf textarea { padding: 20px 40px; border-radius: 18px / 40px; }
+  .leaf textarea {
+    background:
+      radial-gradient(circle at 20px 50%, var(--lacquer-deep) 0 4px, var(--leaf-edge) 4.5px 6px, transparent 6.5px),
+      radial-gradient(circle at calc(100% - 20px) 50%, var(--lacquer-deep) 0 4px, var(--leaf-edge) 4.5px 6px, transparent 6.5px),
+      repeating-linear-gradient(180deg, transparent 0 7px, rgba(120, 82, 30, 0.08) 7px 8px),
+      linear-gradient(180deg, #F0DCA8 0%, var(--leaf) 45%, #DDBF80 100%);
+  }
+}

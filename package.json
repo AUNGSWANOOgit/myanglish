@@ -1,0 +1,9 @@
+{
+  "name": "myanglish-burmese-converter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Myanglish to Burmese converter for GitHub Pages",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
