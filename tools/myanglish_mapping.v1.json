@@ -1,0 +1,3361 @@
+{
+  "schema_version": "1.0",
+  "name": "Common Myanmar Myanglish Normalization Lexicon",
+  "description": "A practical context-aware mapping for informal Burmese written with Latin characters, especially compressed chat spelling. Myanglish is non-standard, so many forms have multiple valid spellings and some forms are ambiguous.",
+  "language": {
+    "source": "myanglish",
+    "target": "my-MM",
+    "target_name": "Myanmar (Burmese)"
+  },
+  "important_notes": [
+    "Myanglish has no official spelling standard.",
+    "Writers frequently omit vowels, duplicate consonants for emphasis, and mix English with Burmese.",
+    "Do not normalize a token only from spelling when it is marked ambiguous; use neighboring words and sentence structure.",
+    "Final particles such as lrr/lar, ll/le, tl/te, bu/woo, naw, lay and lr may carry grammatical meaning and should not be discarded.",
+    "Case is usually irrelevant in chat: Br, BR and br often represent the same token.",
+    "Repeated letters often carry emphasis rather than a different lexical meaning: lrrr, wooow, nawrr.",
+    "Spaces are unreliable. The same phrase may appear joined, separated, or partially abbreviated."
+  ],
+  "normalization_rules": [
+    {
+      "rule": "lowercase_for_lookup",
+      "description": "Lowercase Latin text for dictionary lookup, while retaining the original form for reconstruction."
+    },
+    {
+      "rule": "collapse_emphasis",
+      "description": "When lookup fails, try collapsing excessive repeated final letters: lrrrr -> lrr, woooo -> woo, nawrrr -> naw."
+    },
+    {
+      "rule": "question_particle",
+      "forms": [
+        "lrr",
+        "lr",
+        "lar",
+        "la"
+      ],
+      "burmese": "လား",
+      "meaning": "yes/no question particle",
+      "example": "kg lrr -> ကောင်းလား"
+    },
+    {
+      "rule": "wh_question_particle",
+      "forms": [
+        "ll",
+        "le",
+        "lel"
+      ],
+      "burmese": "လဲ",
+      "meaning": "question particle commonly used after wh-questions",
+      "example": "bl lo ll -> ဘယ်လိုလဲ"
+    },
+    {
+      "rule": "statement_particle",
+      "forms": [
+        "tl",
+        "tal",
+        "te",
+        "del"
+      ],
+      "burmese": "တယ်",
+      "meaning": "declarative sentence ending"
+    },
+    {
+      "rule": "negative_frame",
+      "pattern": "ma + VERB/ADJ + bu/woo",
+      "burmese_pattern": "မ + VERB/ADJ + ဘူး",
+      "meaning": "negation",
+      "examples": [
+        "ma hok woo -> မဟုတ်ဘူး",
+        "ma thi bu -> မသိဘူး",
+        "ma ya bu -> မရဘူး"
+      ]
+    },
+    {
+      "rule": "progressive",
+      "pattern": "VERB + ny/nay + tl",
+      "burmese_pattern": "VERB + နေ + တယ်",
+      "meaning": "be doing / currently doing",
+      "example": "lote ny tl -> လုပ်နေတယ်"
+    },
+    {
+      "rule": "future_or_intention",
+      "forms": [
+        "ml",
+        "mel",
+        "mal"
+      ],
+      "burmese": "မယ်",
+      "meaning": "future/intention sentence ending"
+    },
+    {
+      "rule": "want_to",
+      "forms": [
+        "chin",
+        "kyin"
+      ],
+      "burmese": "ချင်",
+      "meaning": "want to",
+      "example": "sar chin tl -> စားချင်တယ်"
+    },
+    {
+      "rule": "already_completed",
+      "forms": [
+        "p p",
+        "pyi p",
+        "pyi bi",
+        "pee p"
+      ],
+      "burmese": "ပြီးပြီ",
+      "meaning": "already / finished",
+      "note": "Highly variable and context-dependent."
+    }
+  ],
+  "token_map": [
+    {
+      "variants": [
+        "hyg",
+        "hy yaung",
+        "hay yaung",
+        "hey yaung"
+      ],
+      "burmese": "ဟေ့ရောင်",
+      "english": [
+        "hey dude",
+        "hey bro"
+      ],
+      "type": "address",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "a may",
+        "amay",
+        "a mae",
+        "amae"
+      ],
+      "burmese": "အမေ",
+      "english": [
+        "mother",
+        "mom"
+      ],
+      "type": "noun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "a phay",
+        "aphay",
+        "a phe"
+      ],
+      "burmese": "အဖေ",
+      "english": [
+        "father",
+        "dad"
+      ],
+      "type": "noun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "may may",
+        "mamae",
+        "mae mae"
+      ],
+      "burmese": "မေမေ",
+      "english": [
+        "mom",
+        "mommy"
+      ],
+      "type": "noun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "phay phay",
+        "phe phe"
+      ],
+      "burmese": "ဖေဖေ",
+      "english": [
+        "dad",
+        "daddy"
+      ],
+      "type": "noun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thar"
+      ],
+      "burmese": "သား",
+      "english": [
+        "son",
+        "I/me when a son refers to himself to parents"
+      ],
+      "type": "noun/pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thamee",
+        "tha mee"
+      ],
+      "burmese": "သမီး",
+      "english": [
+        "daughter",
+        "I/me when a daughter refers to herself to parents"
+      ],
+      "type": "noun/pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nga"
+      ],
+      "burmese": "ငါ",
+      "english": [
+        "I",
+        "me"
+      ],
+      "type": "pronoun",
+      "register": "very informal",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nin"
+      ],
+      "burmese": "နင်",
+      "english": [
+        "you"
+      ],
+      "type": "pronoun",
+      "register": "very informal",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "min",
+        "ming"
+      ],
+      "burmese": "မင်း",
+      "english": [
+        "you"
+      ],
+      "type": "pronoun",
+      "register": "informal",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thu"
+      ],
+      "burmese": "သူ",
+      "english": [
+        "he",
+        "she",
+        "him",
+        "her"
+      ],
+      "type": "pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thu do",
+        "thu to",
+        "thudo"
+      ],
+      "burmese": "သူတို့",
+      "english": [
+        "they",
+        "them"
+      ],
+      "type": "pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ko",
+        "koe"
+      ],
+      "burmese": "ကို",
+      "english": [
+        "object marker",
+        "to"
+      ],
+      "type": "particle",
+      "confidence": "high",
+      "ambiguous_with": [
+        "ကိုယ်",
+        "ကို (older-brother/title)"
+      ]
+    },
+    {
+      "variants": [
+        "ka"
+      ],
+      "burmese": "က",
+      "english": [
+        "subject/topic/source marker",
+        "from"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "mha",
+        "hma"
+      ],
+      "burmese": "မှာ",
+      "english": [
+        "at",
+        "in",
+        "will/when depending on syntax"
+      ],
+      "type": "particle",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "မှ"
+      ]
+    },
+    {
+      "variants": [
+        "hmar",
+        "mar"
+      ],
+      "burmese": "မှာ",
+      "english": [
+        "at",
+        "in",
+        "will/when depending on syntax"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "nè",
+        "nae",
+        "ne",
+        "nh"
+      ],
+      "burmese": "နဲ့",
+      "english": [
+        "with",
+        "and",
+        "negative imperative ending depending on syntax"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "atwat",
+        "a twat"
+      ],
+      "burmese": "အတွက်",
+      "english": [
+        "for"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kyount",
+        "kyaung",
+        "ကြောင့်"
+      ],
+      "burmese": "ကြောင့်",
+      "english": [
+        "because of"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "si",
+        "ဆီ"
+      ],
+      "burmese": "ဆီ",
+      "english": [
+        "toward",
+        "to someone's place"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "htel",
+        "htae",
+        "ထဲ"
+      ],
+      "burmese": "ထဲ",
+      "english": [
+        "inside"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "paw",
+        "ပေါ်"
+      ],
+      "burmese": "ပေါ်",
+      "english": [
+        "on",
+        "above"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "d",
+        "di"
+      ],
+      "burmese": "ဒီ",
+      "english": [
+        "this"
+      ],
+      "type": "determiner",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "d hrr",
+        "di har",
+        "di ha",
+        "d har"
+      ],
+      "burmese": "ဒီဟာ",
+      "english": [
+        "this",
+        "this thing"
+      ],
+      "type": "pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "d hrr ka",
+        "di har ka",
+        "di ha ka"
+      ],
+      "burmese": "ဒီဟာက",
+      "english": [
+        "this one",
+        "as for this"
+      ],
+      "type": "phrase",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ho har",
+        "ho hrr"
+      ],
+      "burmese": "ဟိုဟာ",
+      "english": [
+        "that thing over there"
+      ],
+      "type": "pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ae dar",
+        "aedar",
+        "e dar",
+        "ဒါ"
+      ],
+      "burmese": "အဲ့ဒါ",
+      "english": [
+        "that",
+        "that thing"
+      ],
+      "type": "pronoun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ek lo",
+        "ae lo",
+        "aelo",
+        "e lo"
+      ],
+      "burmese": "အဲ့လို",
+      "english": [
+        "like that",
+        "that way"
+      ],
+      "type": "adverb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "d lo",
+        "di lo"
+      ],
+      "burmese": "ဒီလို",
+      "english": [
+        "like this",
+        "this way"
+      ],
+      "type": "adverb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "br",
+        "bar",
+        "ba"
+      ],
+      "burmese": "ဘာ",
+      "english": [
+        "what"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl",
+        "bel"
+      ],
+      "burmese": "ဘယ်",
+      "english": [
+        "which",
+        "where/how when combined"
+      ],
+      "type": "wh_stem",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl lo",
+        "bel lo"
+      ],
+      "burmese": "ဘယ်လို",
+      "english": [
+        "how",
+        "what way"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl mha",
+        "bel mha",
+        "bl hmar"
+      ],
+      "burmese": "ဘယ်မှာ",
+      "english": [
+        "where"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl thu",
+        "bel thu"
+      ],
+      "burmese": "ဘယ်သူ",
+      "english": [
+        "who"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl ka",
+        "bel ka"
+      ],
+      "burmese": "ဘယ်က",
+      "english": [
+        "from where"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl taw",
+        "bel taw"
+      ],
+      "burmese": "ဘယ်တော့",
+      "english": [
+        "when"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bl lout",
+        "bel lout"
+      ],
+      "burmese": "ဘယ်လောက်",
+      "english": [
+        "how much",
+        "how many"
+      ],
+      "type": "wh_word",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "br phyit lo",
+        "bar phyit lo",
+        "ba phyit lo"
+      ],
+      "burmese": "ဘာဖြစ်လို့",
+      "english": [
+        "why"
+      ],
+      "type": "wh_phrase",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "br phyit tr ll",
+        "bar phyit tar le"
+      ],
+      "burmese": "ဘာဖြစ်တာလဲ",
+      "english": [
+        "what happened",
+        "what is wrong"
+      ],
+      "type": "wh_phrase",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ny",
+        "nay"
+      ],
+      "burmese": "နေ",
+      "english": [
+        "stay",
+        "live",
+        "progressive aspect marker"
+      ],
+      "type": "verb/aspect",
+      "confidence": "high",
+      "note": "In br lote ny ll, ny = နေ."
+    },
+    {
+      "variants": [
+        "kg",
+        "kaung",
+        "kaung"
+      ],
+      "burmese": "ကောင်း",
+      "english": [
+        "good",
+        "well"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lrr",
+        "lr",
+        "lar",
+        "la"
+      ],
+      "burmese": "လား",
+      "english": [
+        "yes/no question particle"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ll",
+        "le",
+        "lel"
+      ],
+      "burmese": "လဲ",
+      "english": [
+        "wh-question particle",
+        "also/too in some contexts"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "tl",
+        "tal",
+        "te",
+        "del"
+      ],
+      "burmese": "တယ်",
+      "english": [
+        "declarative ending"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bu",
+        "boo",
+        "woo",
+        "wu"
+      ],
+      "burmese": "ဘူး",
+      "english": [
+        "negative sentence ending"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ml",
+        "mel",
+        "mal"
+      ],
+      "burmese": "မယ်",
+      "english": [
+        "will",
+        "going to",
+        "intend to"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "naw",
+        "nor",
+        "နော်"
+      ],
+      "burmese": "နော်",
+      "english": [
+        "okay?",
+        "you know",
+        "softening/emphasis particle"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lay",
+        "လေး"
+      ],
+      "burmese": "လေး",
+      "english": [
+        "little",
+        "polite/affectionate softener"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pe",
+        "pal",
+        "pel"
+      ],
+      "burmese": "ပဲ",
+      "english": [
+        "only",
+        "just",
+        "emphasis"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "le",
+        "lay"
+      ],
+      "burmese": "လေ",
+      "english": [
+        "emphasis/explanatory particle"
+      ],
+      "type": "particle",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "လဲ",
+        "လေး"
+      ]
+    },
+    {
+      "variants": [
+        "tot",
+        "toh",
+        "တော့"
+      ],
+      "burmese": "တော့",
+      "english": [
+        "as for",
+        "then",
+        "contrast/topic marker"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "yaw",
+        "ရော"
+      ],
+      "burmese": "ရော",
+      "english": [
+        "and what about",
+        "also/in addition"
+      ],
+      "type": "particle",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "le",
+        "လည်း",
+        "lဲ"
+      ],
+      "burmese": "လည်း",
+      "english": [
+        "also",
+        "too"
+      ],
+      "type": "particle",
+      "confidence": "low",
+      "note": "Romanization overlaps with လဲ/လေ; resolve from syntax."
+    },
+    {
+      "variants": [
+        "mha",
+        "hma"
+      ],
+      "burmese": "မှ",
+      "english": [
+        "only",
+        "then",
+        "from"
+      ],
+      "type": "particle",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "မှာ"
+      ]
+    },
+    {
+      "variants": [
+        "loh",
+        "lo",
+        "loh"
+      ],
+      "burmese": "လို့",
+      "english": [
+        "quotative/complementizer",
+        "because/as"
+      ],
+      "type": "particle",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma loh",
+        "ma lo"
+      ],
+      "burmese": "မလို့",
+      "english": [
+        "because",
+        "about to/intending to in some colloquial constructions"
+      ],
+      "type": "particle/phrase",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "hok",
+        "hout",
+        "hote"
+      ],
+      "burmese": "ဟုတ်",
+      "english": [
+        "be correct",
+        "yes/true"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma hok",
+        "ma hout",
+        "ma hote"
+      ],
+      "burmese": "မဟုတ်",
+      "english": [
+        "not be",
+        "not correct"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "shi",
+        "ရှိ"
+      ],
+      "burmese": "ရှိ",
+      "english": [
+        "have",
+        "exist",
+        "be present"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma shi"
+      ],
+      "burmese": "မရှိ",
+      "english": [
+        "do not have",
+        "not exist"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ya",
+        "ရ"
+      ],
+      "burmese": "ရ",
+      "english": [
+        "get",
+        "can",
+        "be allowed"
+      ],
+      "type": "verb/modal",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "ma ya"
+      ],
+      "burmese": "မရ",
+      "english": [
+        "cannot",
+        "not allowed",
+        "do not get"
+      ],
+      "type": "verb/modal",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thi",
+        "ti"
+      ],
+      "burmese": "သိ",
+      "english": [
+        "know"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma thi",
+        "ma ti"
+      ],
+      "burmese": "မသိ",
+      "english": [
+        "do not know"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nar lal",
+        "na lal",
+        "narle"
+      ],
+      "burmese": "နားလည်",
+      "english": [
+        "understand"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma nar lal",
+        "ma na lal"
+      ],
+      "burmese": "နားမလည်",
+      "english": [
+        "do not understand"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lote",
+        "loat",
+        "လုပ်"
+      ],
+      "burmese": "လုပ်",
+      "english": [
+        "do",
+        "make"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "sar",
+        "စား"
+      ],
+      "burmese": "စား",
+      "english": [
+        "eat"
+      ],
+      "type": "verb",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "ဆာ"
+      ]
+    },
+    {
+      "variants": [
+        "thout",
+        "thauk"
+      ],
+      "burmese": "သောက်",
+      "english": [
+        "drink"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thwar",
+        "thwa"
+      ],
+      "burmese": "သွား",
+      "english": [
+        "go"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lar",
+        "လာ"
+      ],
+      "burmese": "လာ",
+      "english": [
+        "come"
+      ],
+      "type": "verb",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "လား"
+      ]
+    },
+    {
+      "variants": [
+        "eik",
+        "ake",
+        "အိပ်"
+      ],
+      "burmese": "အိပ်",
+      "english": [
+        "sleep"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "noe",
+        "နိုး"
+      ],
+      "burmese": "နိုး",
+      "english": [
+        "wake up"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pyan",
+        "ပြန်"
+      ],
+      "burmese": "ပြန်",
+      "english": [
+        "return",
+        "again"
+      ],
+      "type": "verb/adverb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pyaw",
+        "ပြော"
+      ],
+      "burmese": "ပြော",
+      "english": [
+        "say",
+        "speak",
+        "tell"
+      ],
+      "type": "verb",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "ပျော်"
+      ]
+    },
+    {
+      "variants": [
+        "may",
+        "mayy",
+        "မေး"
+      ],
+      "burmese": "မေး",
+      "english": [
+        "ask"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "phyay",
+        "phye"
+      ],
+      "burmese": "ဖြေ",
+      "english": [
+        "answer",
+        "solve"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kyi",
+        "ကြည့်"
+      ],
+      "burmese": "ကြည့်",
+      "english": [
+        "look",
+        "watch",
+        "try"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "twe",
+        "တွေ့"
+      ],
+      "burmese": "တွေ့",
+      "english": [
+        "meet",
+        "see/find"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "saung",
+        "စောင့်"
+      ],
+      "burmese": "စောင့်",
+      "english": [
+        "wait"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "yu",
+        "ယူ"
+      ],
+      "burmese": "ယူ",
+      "english": [
+        "take"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pay",
+        "ပေး"
+      ],
+      "burmese": "ပေး",
+      "english": [
+        "give",
+        "do for someone"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "wel",
+        "we",
+        "ဝယ်"
+      ],
+      "burmese": "ဝယ်",
+      "english": [
+        "buy"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "yaung",
+        "ရောင်း"
+      ],
+      "burmese": "ရောင်း",
+      "english": [
+        "sell"
+      ],
+      "type": "verb",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "ရောင်"
+      ]
+    },
+    {
+      "variants": [
+        "po",
+        "poh",
+        "ပို့"
+      ],
+      "burmese": "ပို့",
+      "english": [
+        "send"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "khaw",
+        "ခေါ်"
+      ],
+      "burmese": "ခေါ်",
+      "english": [
+        "call",
+        "invite",
+        "name"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "phwint",
+        "pwint",
+        "ဖွင့်"
+      ],
+      "burmese": "ဖွင့်",
+      "english": [
+        "open",
+        "turn on"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pate",
+        "peik",
+        "ပိတ်"
+      ],
+      "burmese": "ပိတ်",
+      "english": [
+        "close",
+        "turn off"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "yay",
+        "ရေး"
+      ],
+      "burmese": "ရေး",
+      "english": [
+        "write"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "phat",
+        "ဖတ်"
+      ],
+      "burmese": "ဖတ်",
+      "english": [
+        "read"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "tet",
+        "တက်"
+      ],
+      "burmese": "တက်",
+      "english": [
+        "go up",
+        "attend",
+        "know how to"
+      ],
+      "type": "verb",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "sin",
+        "ဆင်း"
+      ],
+      "burmese": "ဆင်း",
+      "english": [
+        "go down",
+        "get off"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "yout",
+        "yauk",
+        "ရောက်"
+      ],
+      "burmese": "ရောက်",
+      "english": [
+        "arrive",
+        "reach"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "chin",
+        "kyin",
+        "ချင်"
+      ],
+      "burmese": "ချင်",
+      "english": [
+        "want to"
+      ],
+      "type": "auxiliary",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lo",
+        "လို"
+      ],
+      "burmese": "လို",
+      "english": [
+        "need",
+        "want",
+        "like/as"
+      ],
+      "type": "verb/particle",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "လို့"
+      ]
+    },
+    {
+      "variants": [
+        "pyi",
+        "pee",
+        "ပြီး"
+      ],
+      "burmese": "ပြီး",
+      "english": [
+        "finish",
+        "after",
+        "already"
+      ],
+      "type": "verb/aspect",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pyi p",
+        "pee p",
+        "p p"
+      ],
+      "burmese": "ပြီးပြီ",
+      "english": [
+        "finished already",
+        "done"
+      ],
+      "type": "phrase",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "ma lote ne",
+        "ma lote nae"
+      ],
+      "burmese": "မလုပ်နဲ့",
+      "english": [
+        "don't do it"
+      ],
+      "type": "negative_imperative",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma thwar ne",
+        "ma thwar nae"
+      ],
+      "burmese": "မသွားနဲ့",
+      "english": [
+        "don't go"
+      ],
+      "type": "negative_imperative",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kg",
+        "kaung"
+      ],
+      "burmese": "ကောင်း",
+      "english": [
+        "good",
+        "well"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "a sin pyay",
+        "asin pyay",
+        "a sin pyae"
+      ],
+      "burmese": "အဆင်ပြေ",
+      "english": [
+        "okay",
+        "convenient",
+        "fine"
+      ],
+      "type": "adjective/verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pyaw"
+      ],
+      "burmese": "ပျော်",
+      "english": [
+        "happy",
+        "have fun"
+      ],
+      "type": "adjective/verb",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "ပြော"
+      ]
+    },
+    {
+      "variants": [
+        "sate nyit",
+        "seit nyit"
+      ],
+      "burmese": "စိတ်ညစ်",
+      "english": [
+        "stressed",
+        "annoyed",
+        "upset"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "sate soe",
+        "seit soe"
+      ],
+      "burmese": "စိတ်ဆိုး",
+      "english": [
+        "angry"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "sate pu",
+        "seit pu"
+      ],
+      "burmese": "စိတ်ပူ",
+      "english": [
+        "worried"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kyout",
+        "ကြောက်"
+      ],
+      "burmese": "ကြောက်",
+      "english": [
+        "afraid"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lant",
+        "လန့်"
+      ],
+      "burmese": "လန့်",
+      "english": [
+        "startled",
+        "scared suddenly"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "wan thar",
+        "ဝမ်းသာ"
+      ],
+      "burmese": "ဝမ်းသာ",
+      "english": [
+        "glad",
+        "happy"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "wan nee",
+        "ဝမ်းနည်း"
+      ],
+      "burmese": "ဝမ်းနည်း",
+      "english": [
+        "sad"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pin pan",
+        "ပင်ပန်း"
+      ],
+      "burmese": "ပင်ပန်း",
+      "english": [
+        "tired",
+        "exhausted"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "maw",
+        "မော"
+      ],
+      "burmese": "မော",
+      "english": [
+        "tired",
+        "out of breath"
+      ],
+      "type": "state",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "sar"
+      ],
+      "burmese": "ဆာ",
+      "english": [
+        "hungry"
+      ],
+      "type": "state",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "စား"
+      ]
+    },
+    {
+      "variants": [
+        "chit",
+        "ချစ်"
+      ],
+      "burmese": "ချစ်",
+      "english": [
+        "love"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kyite",
+        "ကြိုက်"
+      ],
+      "burmese": "ကြိုက်",
+      "english": [
+        "like"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lwan",
+        "လွမ်း"
+      ],
+      "burmese": "လွမ်း",
+      "english": [
+        "miss someone",
+        "long for"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "tha ti ya",
+        "thati ya",
+        "သတိရ"
+      ],
+      "burmese": "သတိရ",
+      "english": [
+        "miss",
+        "remember"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "mone",
+        "မုန်း"
+      ],
+      "burmese": "မုန်း",
+      "english": [
+        "hate"
+      ],
+      "type": "verb",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "hla",
+        "လှ"
+      ],
+      "burmese": "လှ",
+      "english": [
+        "beautiful",
+        "pretty"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "chaw",
+        "ချော"
+      ],
+      "burmese": "ချော",
+      "english": [
+        "handsome",
+        "pretty",
+        "smooth"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "mike",
+        "မိုက်"
+      ],
+      "burmese": "မိုက်",
+      "english": [
+        "cool",
+        "awesome",
+        "foolish depending on context"
+      ],
+      "type": "adjective",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "yoo",
+        "ရူး"
+      ],
+      "burmese": "ရူး",
+      "english": [
+        "crazy"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "khet",
+        "ခက်"
+      ],
+      "burmese": "ခက်",
+      "english": [
+        "difficult"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "lwe",
+        "လွယ်"
+      ],
+      "burmese": "လွယ်",
+      "english": [
+        "easy"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "myan",
+        "မြန်"
+      ],
+      "burmese": "မြန်",
+      "english": [
+        "fast"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "hnay",
+        "နှေး"
+      ],
+      "burmese": "နှေး",
+      "english": [
+        "slow"
+      ],
+      "type": "adjective",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "gyi",
+        "ကြီး"
+      ],
+      "burmese": "ကြီး",
+      "english": [
+        "big",
+        "large",
+        "augmentative"
+      ],
+      "type": "adjective/suffix",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "thay",
+        "သေး"
+      ],
+      "burmese": "သေး",
+      "english": [
+        "small",
+        "still/yet depending on syntax"
+      ],
+      "type": "adjective/particle",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "သေ"
+      ]
+    },
+    {
+      "variants": [
+        "akhu",
+        "a khu",
+        "khu"
+      ],
+      "burmese": "အခု",
+      "english": [
+        "now"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "d nay",
+        "di nay"
+      ],
+      "burmese": "ဒီနေ့",
+      "english": [
+        "today"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma nay ka",
+        "manayka"
+      ],
+      "burmese": "မနေ့က",
+      "english": [
+        "yesterday"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma net phyan",
+        "manet phyan",
+        "mnet phyan"
+      ],
+      "burmese": "မနက်ဖြန်",
+      "english": [
+        "tomorrow"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ma net",
+        "manet"
+      ],
+      "burmese": "မနက်",
+      "english": [
+        "morning"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nay lel",
+        "nel"
+      ],
+      "burmese": "နေ့လယ်",
+      "english": [
+        "noon",
+        "afternoon"
+      ],
+      "type": "time",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "nya nay",
+        "ညနေ"
+      ],
+      "burmese": "ညနေ",
+      "english": [
+        "evening"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nya",
+        "ည"
+      ],
+      "burmese": "ည",
+      "english": [
+        "night"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "nout mha",
+        "nauk mha"
+      ],
+      "burmese": "နောက်မှ",
+      "english": [
+        "later"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kha na",
+        "khana"
+      ],
+      "burmese": "ခဏ",
+      "english": [
+        "a moment",
+        "for a while"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kha na lay",
+        "khana lay"
+      ],
+      "burmese": "ခဏလေး",
+      "english": [
+        "just a moment"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "a yin",
+        "ayin"
+      ],
+      "burmese": "အရင်",
+      "english": [
+        "before",
+        "first"
+      ],
+      "type": "time",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pyi yin",
+        "pee yin"
+      ],
+      "burmese": "ပြီးရင်",
+      "english": [
+        "after that",
+        "when finished"
+      ],
+      "type": "time/connector",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "di mha",
+        "d mha"
+      ],
+      "burmese": "ဒီမှာ",
+      "english": [
+        "here"
+      ],
+      "type": "location",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ho mha"
+      ],
+      "burmese": "ဟိုမှာ",
+      "english": [
+        "there"
+      ],
+      "type": "location",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "ein",
+        "အိမ်"
+      ],
+      "burmese": "အိမ်",
+      "english": [
+        "home",
+        "house"
+      ],
+      "type": "noun",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "kyaung",
+        "ကျောင်း"
+      ],
+      "burmese": "ကျောင်း",
+      "english": [
+        "school"
+      ],
+      "type": "noun",
+      "confidence": "medium",
+      "ambiguous_with": [
+        "ကြောင်း"
+      ]
+    },
+    {
+      "variants": [
+        "sa yin",
+        "စာရင်း"
+      ],
+      "burmese": "စာရင်း",
+      "english": [
+        "list",
+        "account"
+      ],
+      "type": "noun",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "sar",
+        "စာ"
+      ],
+      "burmese": "စာ",
+      "english": [
+        "text",
+        "letter",
+        "lesson",
+        "food in compounds"
+      ],
+      "type": "noun",
+      "confidence": "low",
+      "ambiguous_with": [
+        "စား",
+        "ဆာ"
+      ]
+    },
+    {
+      "variants": [
+        "yes",
+        "ya",
+        "yeah"
+      ],
+      "burmese": "အင်း / ဟုတ်",
+      "english": [
+        "yes"
+      ],
+      "type": "mixed_chat",
+      "confidence": "medium",
+      "note": "English yes/yeah is often mixed directly into Burmese chat."
+    },
+    {
+      "variants": [
+        "no",
+        "nope"
+      ],
+      "burmese": "မဟုတ်ဘူး / မရဘူး / မလိုဘူး",
+      "english": [
+        "no"
+      ],
+      "type": "mixed_chat",
+      "confidence": "low",
+      "note": "Exact Burmese rendering depends on what is being rejected."
+    },
+    {
+      "variants": [
+        "ok",
+        "okay",
+        "okeh",
+        "အိုကေ"
+      ],
+      "burmese": "အိုကေ",
+      "english": [
+        "okay"
+      ],
+      "type": "loanword",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "bro"
+      ],
+      "burmese": "ဘရို",
+      "english": [
+        "bro"
+      ],
+      "type": "loanword/address",
+      "confidence": "high"
+    },
+    {
+      "variants": [
+        "pls",
+        "plz"
+      ],
+      "burmese": "ကျေးဇူးပြုပြီး / ပေးပါ",
+      "english": [
+        "please"
+      ],
+      "type": "mixed_chat",
+      "confidence": "medium"
+    },
+    {
+      "variants": [
+        "ty",
+        "thx",
+        "thanks"
+      ],
+      "burmese": "ကျေးဇူးတင်တယ်",
+      "english": [
+        "thank you"
+      ],
+      "type": "mixed_chat",
+      "confidence": "high"
+    }
+  ],
+  "phrase_map": [
+    {
+      "myanglish": [
+        "hyg ny kg lrr",
+        "hay yaung nay kaung lar"
+      ],
+      "burmese": "ဟေ့ရောင် နေကောင်းလား",
+      "english": "Hey bro/dude, how are you?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ny kg lrr",
+        "nay kaung lar"
+      ],
+      "burmese": "နေကောင်းလား",
+      "english": "How are you? / Are you well?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kg tl",
+        "kaung tl"
+      ],
+      "burmese": "ကောင်းတယ်",
+      "english": "It's good / I'm good.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kg pr tl",
+        "kaung par tal"
+      ],
+      "burmese": "ကောင်းပါတယ်",
+      "english": "I'm fine / It's fine.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br lote ny ll",
+        "bar lote nay le",
+        "br loat ny ll"
+      ],
+      "burmese": "ဘာလုပ်နေလဲ",
+      "english": "What are you doing? / What are you up to?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br lote ml",
+        "bar lote mal"
+      ],
+      "burmese": "ဘာလုပ်မလဲ",
+      "english": "What will you do?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br lote chin ll",
+        "bar lote chin le"
+      ],
+      "burmese": "ဘာလုပ်ချင်လဲ",
+      "english": "What do you want to do?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl lo ll",
+        "bel lo le"
+      ],
+      "burmese": "ဘယ်လိုလဲ",
+      "english": "How is it? / How? / What do you think?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl mha ll",
+        "bel mha le"
+      ],
+      "burmese": "ဘယ်မှာလဲ",
+      "english": "Where is it/are you?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl thu ll",
+        "bel thu le"
+      ],
+      "burmese": "ဘယ်သူလဲ",
+      "english": "Who is it?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl ka ll",
+        "bel ka le"
+      ],
+      "burmese": "ဘယ်ကလဲ",
+      "english": "Where are you/it from?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl taw ll",
+        "bel taw le"
+      ],
+      "burmese": "ဘယ်တော့လဲ",
+      "english": "When?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl lout ll",
+        "bel lout le"
+      ],
+      "burmese": "ဘယ်လောက်လဲ",
+      "english": "How much is it?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br ll",
+        "bar le"
+      ],
+      "burmese": "ဘာလဲ",
+      "english": "What is it?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br phyit lo ll",
+        "bar phyit lo le"
+      ],
+      "burmese": "ဘာဖြစ်လို့လဲ",
+      "english": "Why?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br phyit tr ll",
+        "bar phyit tar le"
+      ],
+      "burmese": "ဘာဖြစ်တာလဲ",
+      "english": "What happened? / What's wrong?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ek lo ma hok woo",
+        "ae lo ma hote bu",
+        "e lo ma hok woo"
+      ],
+      "burmese": "အဲ့လို မဟုတ်ဘူး",
+      "english": "It's not like that / That's not what I mean.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "d hrr ka",
+        "di har ka"
+      ],
+      "burmese": "ဒီဟာက",
+      "english": "This one... / As for this...",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "d hrr br ll",
+        "di har bar le"
+      ],
+      "burmese": "ဒီဟာ ဘာလဲ",
+      "english": "What is this?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ae dar br ll",
+        "e dar bar le"
+      ],
+      "burmese": "အဲ့ဒါ ဘာလဲ",
+      "english": "What is that?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "d lo lote",
+        "di lo lote"
+      ],
+      "burmese": "ဒီလိုလုပ်",
+      "english": "Do it like this.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ek lo ma lote ne",
+        "ae lo ma lote nae"
+      ],
+      "burmese": "အဲ့လို မလုပ်နဲ့",
+      "english": "Don't do it like that.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "a may ko thar mayy ma loh",
+        "amay ko thar may ma lo"
+      ],
+      "burmese": "အမေကို သားမေးမလို့",
+      "english": "Mom, I wanted to ask you something / I was going to ask Mom.",
+      "confidence": "medium",
+      "note": "Exact English depends on who is being addressed and omitted context."
+    },
+    {
+      "myanglish": [
+        "may chin lo",
+        "may chin loh"
+      ],
+      "burmese": "မေးချင်လို့",
+      "english": "Because I want to ask / I wanted to ask.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "br may chin lo ll",
+        "bar may chin lo le"
+      ],
+      "burmese": "ဘာမေးချင်လို့လဲ",
+      "english": "What did you want to ask?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "hok tl",
+        "hote tal"
+      ],
+      "burmese": "ဟုတ်တယ်",
+      "english": "Yes / That's right.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma hok woo",
+        "ma hote bu"
+      ],
+      "burmese": "မဟုတ်ဘူး",
+      "english": "No / That's not it / It isn't.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "hok lrr",
+        "hote lar"
+      ],
+      "burmese": "ဟုတ်လား",
+      "english": "Really? / Is that so?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "a sin pyay lrr",
+        "asin pyay lar"
+      ],
+      "burmese": "အဆင်ပြေလား",
+      "english": "Is it okay/convenient? / Are you okay?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "a sin pyay tl",
+        "asin pyay tal"
+      ],
+      "burmese": "အဆင်ပြေတယ်",
+      "english": "It's okay / It works for me.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma a sin pyay bu",
+        "ma asin pyay bu"
+      ],
+      "burmese": "အဆင်မပြေဘူး",
+      "english": "It's not convenient / It's not okay.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "shi lrr",
+        "shi lar"
+      ],
+      "burmese": "ရှိလား",
+      "english": "Do you have it? / Is there any?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "shi tl",
+        "shi tal"
+      ],
+      "burmese": "ရှိတယ်",
+      "english": "There is / I have it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma shi bu",
+        "ma shi woo"
+      ],
+      "burmese": "မရှိဘူး",
+      "english": "There isn't any / I don't have it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ya lrr",
+        "ya lar"
+      ],
+      "burmese": "ရလား",
+      "english": "Can I/you? / Is it allowed? / Does it work?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ya tl",
+        "ya tal"
+      ],
+      "burmese": "ရတယ်",
+      "english": "Can / allowed / works.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma ya bu",
+        "ma ya woo"
+      ],
+      "burmese": "မရဘူး",
+      "english": "Can't / not allowed / doesn't work.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "thi lrr",
+        "thi lar"
+      ],
+      "burmese": "သိလား",
+      "english": "Do you know?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma thi bu",
+        "ma ti bu"
+      ],
+      "burmese": "မသိဘူး",
+      "english": "I don't know.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "nar lal lrr",
+        "na lal lar"
+      ],
+      "burmese": "နားလည်လား",
+      "english": "Do you understand?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "nar lal tl",
+        "na lal tal"
+      ],
+      "burmese": "နားလည်တယ်",
+      "english": "I understand.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "nar ma lal bu",
+        "na ma lal bu"
+      ],
+      "burmese": "နားမလည်ဘူး",
+      "english": "I don't understand.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sar p p lrr",
+        "sar pyi p lar"
+      ],
+      "burmese": "စားပြီးပြီလား",
+      "english": "Have you eaten already?",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "sar p p",
+        "sar pyi p"
+      ],
+      "burmese": "စားပြီးပြီ",
+      "english": "I've eaten already.",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "ma sar ya thay bu",
+        "ma sar ya thay bu"
+      ],
+      "burmese": "မစားရသေးဘူး",
+      "english": "I haven't eaten yet.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sar chin tl",
+        "sar chin tal"
+      ],
+      "burmese": "စားချင်တယ်",
+      "english": "I want to eat.",
+      "confidence": "medium",
+      "note": "Here sar resolves to စား because it is followed by ချင်."
+    },
+    {
+      "myanglish": [
+        "sar tl",
+        "sar tal"
+      ],
+      "burmese": "ဆာတယ်",
+      "english": "I'm hungry.",
+      "confidence": "medium",
+      "note": "In this short phrase, sar commonly represents ဆာ 'hungry', not စား 'eat'."
+    },
+    {
+      "myanglish": [
+        "br sar ml",
+        "bar sar mal"
+      ],
+      "burmese": "ဘာစားမလဲ",
+      "english": "What will you eat? / What should we eat?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sar ml",
+        "sar mal"
+      ],
+      "burmese": "စားမယ်",
+      "english": "I'll eat.",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "bl thwar ml",
+        "bel thwar mal"
+      ],
+      "burmese": "ဘယ်သွားမလဲ",
+      "english": "Where are you going?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "thwar ml",
+        "thwar mal"
+      ],
+      "burmese": "သွားမယ်",
+      "english": "I'll go.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma thwar bu",
+        "ma thwar woo"
+      ],
+      "burmese": "မသွားဘူး",
+      "english": "I won't go / I don't go.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "lar ml",
+        "လာမယ်"
+      ],
+      "burmese": "လာမယ်",
+      "english": "I'll come.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "lar lrr",
+        "လာလား"
+      ],
+      "burmese": "လာလား",
+      "english": "Are you coming? / Did you come?",
+      "confidence": "medium",
+      "note": "Both lar tokens can look identical in Latin script; syntax determines verb လာ vs question particle လား."
+    },
+    {
+      "myanglish": [
+        "yout p lrr",
+        "yout pyi lar"
+      ],
+      "burmese": "ရောက်ပြီလား",
+      "english": "Have you arrived?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "yout p",
+        "yout pyi"
+      ],
+      "burmese": "ရောက်ပြီ",
+      "english": "I've arrived.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ein yout p",
+        "ein yout pyi"
+      ],
+      "burmese": "အိမ်ရောက်ပြီ",
+      "english": "I'm home / I've reached home.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "bl yout ny p ll",
+        "bel yout nay pyi le"
+      ],
+      "burmese": "ဘယ်ရောက်နေပြီလဲ",
+      "english": "Where are you now? / How far have you gotten?",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "eik ml",
+        "eik mal"
+      ],
+      "burmese": "အိပ်မယ်",
+      "english": "I'm going to sleep.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "eik p lrr",
+        "eik pyi lar"
+      ],
+      "burmese": "အိပ်ပြီလား",
+      "english": "Did you go to sleep already?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma eik thay bu"
+      ],
+      "burmese": "မအိပ်သေးဘူး",
+      "english": "I haven't slept yet / I'm not sleeping yet.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "noe p lrr",
+        "noe pyi lar"
+      ],
+      "burmese": "နိုးပြီလား",
+      "english": "Are you awake now?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pyan lar ml",
+        "pyan lar mal"
+      ],
+      "burmese": "ပြန်လာမယ်",
+      "english": "I'll come back.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pyan thwar p",
+        "pyan thwar pyi"
+      ],
+      "burmese": "ပြန်သွားပြီ",
+      "english": "Went back already.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "nout mha pyaw ml",
+        "nauk mha pyaw mal"
+      ],
+      "burmese": "နောက်မှ ပြောမယ်",
+      "english": "I'll tell you later.",
+      "confidence": "high",
+      "note": "pyaw = ပြော because it takes a speech verb role."
+    },
+    {
+      "myanglish": [
+        "br pyaw tr ll",
+        "bar pyaw tar le"
+      ],
+      "burmese": "ဘာပြောတာလဲ",
+      "english": "What are you saying? / What did you say?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kyite lrr",
+        "kyite lar"
+      ],
+      "burmese": "ကြိုက်လား",
+      "english": "Do you like it?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kyite tl",
+        "kyite tal"
+      ],
+      "burmese": "ကြိုက်တယ်",
+      "english": "I like it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma kyite bu"
+      ],
+      "burmese": "မကြိုက်ဘူး",
+      "english": "I don't like it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "chit tl",
+        "chit tal"
+      ],
+      "burmese": "ချစ်တယ်",
+      "english": "I love you/it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "lwan tl",
+        "lwan tal"
+      ],
+      "burmese": "လွမ်းတယ်",
+      "english": "I miss you/someone.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "tha ti ya tl",
+        "thati ya tal"
+      ],
+      "burmese": "သတိရတယ်",
+      "english": "I miss/remember you.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pyaw tl"
+      ],
+      "burmese": "ပျော်တယ်",
+      "english": "I'm happy / It's fun.",
+      "confidence": "medium",
+      "note": "pyaw resolves to ပျော် because it describes a state; compare ပြောတယ် 'say' in speech context."
+    },
+    {
+      "myanglish": [
+        "pin pan tl",
+        "pin pan tal"
+      ],
+      "burmese": "ပင်ပန်းတယ်",
+      "english": "I'm tired.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "maw tl",
+        "maw tal"
+      ],
+      "burmese": "မောတယ်",
+      "english": "I'm tired/out of breath.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sate nyit tl",
+        "seit nyit tal"
+      ],
+      "burmese": "စိတ်ညစ်တယ်",
+      "english": "I'm stressed/upset.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sate pu tl",
+        "seit pu tal"
+      ],
+      "burmese": "စိတ်ပူတယ်",
+      "english": "I'm worried.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "sate ma pu ne",
+        "seit ma pu nae"
+      ],
+      "burmese": "စိတ်မပူနဲ့",
+      "english": "Don't worry.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kha na saung",
+        "khana saung"
+      ],
+      "burmese": "ခဏစောင့်",
+      "english": "Wait a moment.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kha na lay naw",
+        "khana lay naw"
+      ],
+      "burmese": "ခဏလေးနော်",
+      "english": "Just a moment, okay?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pyan pyaw",
+        "ပြန်ပြော"
+      ],
+      "burmese": "ပြန်ပြော",
+      "english": "Say it again / reply.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pyan lote",
+        "ပြန်လုပ်"
+      ],
+      "burmese": "ပြန်လုပ်",
+      "english": "Do it again.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kyi ml",
+        "kyi mal"
+      ],
+      "burmese": "ကြည့်မယ်",
+      "english": "I'll look / I'll try.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "kyi lite",
+        "kyi lite"
+      ],
+      "burmese": "ကြည့်လိုက်",
+      "english": "Take a look / try it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "pay pr",
+        "pay par"
+      ],
+      "burmese": "ပေးပါ",
+      "english": "Please give/do it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "lote pay pr",
+        "lote pay par"
+      ],
+      "burmese": "လုပ်ပေးပါ",
+      "english": "Please do it for me.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "po pay pr",
+        "poh pay par"
+      ],
+      "burmese": "ပို့ပေးပါ",
+      "english": "Please send it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma lote ne",
+        "ma lote nae"
+      ],
+      "burmese": "မလုပ်နဲ့",
+      "english": "Don't do it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma pyaw ne",
+        "ma pyaw nae"
+      ],
+      "burmese": "မပြောနဲ့",
+      "english": "Don't say/tell it.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma thwar ne",
+        "ma thwar nae"
+      ],
+      "burmese": "မသွားနဲ့",
+      "english": "Don't go.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma sate soe ne",
+        "ma seit soe nae"
+      ],
+      "burmese": "စိတ်မဆိုးနဲ့",
+      "english": "Don't be angry.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "d nay br lote ml",
+        "di nay bar lote mal"
+      ],
+      "burmese": "ဒီနေ့ ဘာလုပ်မလဲ",
+      "english": "What are you doing today?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma net phyan br lote ml",
+        "manet phyan bar lote mal"
+      ],
+      "burmese": "မနက်ဖြန် ဘာလုပ်မလဲ",
+      "english": "What are you doing tomorrow?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "nout mha twe ml",
+        "nauk mha twe mal"
+      ],
+      "burmese": "နောက်မှ တွေ့မယ်",
+      "english": "See you later.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ma net phyan twe ml",
+        "manet phyan twe mal"
+      ],
+      "burmese": "မနက်ဖြန် တွေ့မယ်",
+      "english": "See you tomorrow.",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ty naw",
+        "thanks naw"
+      ],
+      "burmese": "ကျေးဇူးနော် / ကျေးဇူးတင်ပါတယ်",
+      "english": "Thanks.",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "sry naw",
+        "sorry naw"
+      ],
+      "burmese": "ဆောရီးနော် / တောင်းပန်ပါတယ်",
+      "english": "Sorry.",
+      "confidence": "medium"
+    },
+    {
+      "myanglish": [
+        "ok naw"
+      ],
+      "burmese": "အိုကေနော်",
+      "english": "Okay, alright?",
+      "confidence": "high"
+    },
+    {
+      "myanglish": [
+        "ok pr"
+      ],
+      "burmese": "အိုကေပါ",
+      "english": "Okay.",
+      "confidence": "high"
+    }
+  ],
+  "ambiguity_rules": [
+    {
+      "latin": "sar",
+      "possible": [
+        {
+          "burmese": "စား",
+          "meaning": "eat",
+          "signals": [
+            "followed by chin/ချင်, ml/မယ်, pyi/ပြီး, food object before it"
+          ]
+        },
+        {
+          "burmese": "ဆာ",
+          "meaning": "hungry",
+          "signals": [
+            "followed directly by tl/တယ် or very short state sentence"
+          ]
+        },
+        {
+          "burmese": "စာ",
+          "meaning": "text/lesson/letter",
+          "signals": [
+            "used as a noun, e.g. sar phat = စာဖတ်"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "pyaw",
+      "possible": [
+        {
+          "burmese": "ပြော",
+          "meaning": "say/speak",
+          "signals": [
+            "has speech/content object; followed by tr/tar, ml/mal; imperative/reply context"
+          ]
+        },
+        {
+          "burmese": "ပျော်",
+          "meaning": "happy/have fun",
+          "signals": [
+            "followed by tl/tal as an emotional state; often with very/too/fun context"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "lar",
+      "possible": [
+        {
+          "burmese": "လာ",
+          "meaning": "come",
+          "signals": [
+            "occupies verb position; may precede ml/tl/pyi"
+          ]
+        },
+        {
+          "burmese": "လား",
+          "meaning": "yes/no question particle",
+          "signals": [
+            "occurs at end of a clause"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "mha/hma",
+      "possible": [
+        {
+          "burmese": "မှာ",
+          "meaning": "at/in/future-related marker",
+          "signals": [
+            "after a location or noun; before verb in some future constructions"
+          ]
+        },
+        {
+          "burmese": "မှ",
+          "meaning": "only/then/from",
+          "signals": [
+            "focus or conditional sequencing context"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "le/lay",
+      "possible": [
+        {
+          "burmese": "လဲ",
+          "meaning": "wh-question ending/also",
+          "signals": [
+            "end of wh-question"
+          ]
+        },
+        {
+          "burmese": "လေ",
+          "meaning": "emphasis/explanation",
+          "signals": [
+            "speaker emphasis, not a real question"
+          ]
+        },
+        {
+          "burmese": "လေး",
+          "meaning": "small/affectionate/polite softener",
+          "signals": [
+            "after noun or request"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "thay",
+      "possible": [
+        {
+          "burmese": "သေး",
+          "meaning": "small/still/yet",
+          "signals": [
+            "ma ... thay bu = not yet; adjective context"
+          ]
+        },
+        {
+          "burmese": "သေ",
+          "meaning": "die/dead",
+          "signals": [
+            "verb/death context"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "ko",
+      "possible": [
+        {
+          "burmese": "ကို",
+          "meaning": "object marker",
+          "signals": [
+            "after a noun before a verb"
+          ]
+        },
+        {
+          "burmese": "ကိုယ်",
+          "meaning": "self/I/you depending register",
+          "signals": [
+            "pronoun position"
+          ]
+        },
+        {
+          "burmese": "ကို",
+          "meaning": "older-brother/title prefix",
+          "signals": [
+            "before a male name"
+          ]
+        }
+      ]
+    },
+    {
+      "latin": "kyaung",
+      "possible": [
+        {
+          "burmese": "ကျောင်း",
+          "meaning": "school",
+          "signals": [
+            "location/education context"
+          ]
+        },
+        {
+          "burmese": "ကြောင်း",
+          "meaning": "that/about/reason nominalizer",
+          "signals": [
+            "clausal/grammatical context"
+          ]
+        }
+      ]
+    }
+  ],
+  "composition_patterns": [
+    {
+      "pattern": "WH + VERB + ny/nay + ll/le",
+      "meaning": "What/where/how is someone currently doing something?",
+      "example": {
+        "myanglish": "br lote ny ll",
+        "burmese": "ဘာလုပ်နေလဲ",
+        "english": "What are you doing?"
+      }
+    },
+    {
+      "pattern": "ADJ/STATE + lrr/lar",
+      "meaning": "Yes/no question about a state",
+      "example": {
+        "myanglish": "kg lrr",
+        "burmese": "ကောင်းလား",
+        "english": "Is it good? / Are you well?"
+      }
+    },
+    {
+      "pattern": "VERB + chin + tl",
+      "meaning": "want to VERB",
+      "example": {
+        "myanglish": "sar chin tl",
+        "burmese": "စားချင်တယ်",
+        "english": "I want to eat."
+      }
+    },
+    {
+      "pattern": "ma + VERB/ADJ + bu/woo",
+      "meaning": "negative statement",
+      "example": {
+        "myanglish": "ma hok woo",
+        "burmese": "မဟုတ်ဘူး",
+        "english": "It isn't / That's not it."
+      }
+    },
+    {
+      "pattern": "ma + VERB + ne/nae",
+      "meaning": "negative command",
+      "example": {
+        "myanglish": "ma lote ne",
+        "burmese": "မလုပ်နဲ့",
+        "english": "Don't do it."
+      }
+    },
+    {
+      "pattern": "VERB + ml/mel/mal",
+      "meaning": "future/intention",
+      "example": {
+        "myanglish": "thwar ml",
+        "burmese": "သွားမယ်",
+        "english": "I'll go."
+      }
+    },
+    {
+      "pattern": "VERB + pyi/p + lrr",
+      "meaning": "ask whether action is already completed",
+      "example": {
+        "myanglish": "yout p lrr",
+        "burmese": "ရောက်ပြီလား",
+        "english": "Have you arrived?"
+      }
+    }
+  ],
+  "model_guidance": {
+    "recommended_pipeline": [
+      "Preserve the raw input.",
+      "Lowercase a lookup copy.",
+      "Normalize obvious emphasis/repetition only if direct lookup fails.",
+      "Try longest phrase matches before token-level matches.",
+      "Use composition patterns for unmatched sequences.",
+      "For ambiguous tokens, score interpretations using neighboring tokens and grammatical position.",
+      "Retain unknown English words as English; Burmese chat often code-switches.",
+      "Do not hallucinate Burmese script for unknown names, usernames, acronyms, or slang.",
+      "Return multiple candidates with confidence when context cannot resolve an ambiguity."
+    ],
+    "suggested_output_schema": {
+      "input": "raw Myanglish string",
+      "normalized_burmese": "best Burmese-script reconstruction",
+      "english_meaning": "contextual English meaning",
+      "confidence": "high|medium|low",
+      "alternatives": [
+        {
+          "burmese": "alternative reconstruction",
+          "english": "alternative meaning",
+          "reason": "why it may fit"
+        }
+      ]
+    }
+  },
+  "test_cases": [
+    {
+      "input": "hyg ny kg lrr",
+      "expected_burmese": "ဟေ့ရောင် နေကောင်းလား",
+      "expected_english": "Hey bro/dude, how are you?"
+    },
+    {
+      "input": "A May ko thar mayy ma loh",
+      "expected_burmese": "အမေကို သားမေးမလို့",
+      "expected_english": "Mom, I wanted to ask you something / I was going to ask Mom."
+    },
+    {
+      "input": "D Hrr ka",
+      "expected_burmese": "ဒီဟာက",
+      "expected_english": "This one... / As for this..."
+    },
+    {
+      "input": "Ek lo ma hok woo",
+      "expected_burmese": "အဲ့လို မဟုတ်ဘူး",
+      "expected_english": "It's not like that / That's not what I mean."
+    },
+    {
+      "input": "Bl lo ll",
+      "expected_burmese": "ဘယ်လိုလဲ",
+      "expected_english": "How is it? / How?"
+    },
+    {
+      "input": "Br lote ny ll",
+      "expected_burmese": "ဘာလုပ်နေလဲ",
+      "expected_english": "What are you doing? / What are you up to?"
+    },
+    {
+      "input": "ma thi bu",
+      "expected_burmese": "မသိဘူး",
+      "expected_english": "I don't know."
+    },
+    {
+      "input": "bl mha ll",
+      "expected_burmese": "ဘယ်မှာလဲ",
+      "expected_english": "Where is it/are you?"
+    },
+    {
+      "input": "yout p lrr",
+      "expected_burmese": "ရောက်ပြီလား",
+      "expected_english": "Have you arrived?"
+    },
+    {
+      "input": "nout mha twe ml",
+      "expected_burmese": "နောက်မှ တွေ့မယ်",
+      "expected_english": "See you later."
+    }
+  ]
+}

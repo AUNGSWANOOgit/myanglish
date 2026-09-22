@@ -1,0 +1,723 @@
+{
+ "subjects": {
+  "ကုမ္ပဏီက": [
+   "ကုမ္ပဏီ",
+   "kone pa ni",
+   true
+  ],
+  "ကျန်းမာရေးအဖွဲ့က": [
+   "ကျန်းမာရေးအဖွဲ့",
+   "kyan mar yay a phwel",
+   true
+  ],
+  "ကျောင်းသားက": [
+   "ကျောင်းသား",
+   "kyaung thar",
+   true
+  ],
+  "ကျောင်းသူက": [
+   "ကျောင်းသူ",
+   "kyaung thu",
+   true
+  ],
+  "ကျွန်တော်": [
+   "ကျွန်တော်",
+   "kya naw",
+   false
+  ],
+  "ကျွန်မ": [
+   "ကျွန်မ",
+   "kya ma",
+   false
+  ],
+  "ကျွန်ုပ်တို့": [
+   "ကျွန်ုပ်တို့",
+   "kyun oke to",
+   false
+  ],
+  "ခရီးစဉ်အဖွဲ့က": [
+   "ခရီးစဉ်အဖွဲ့",
+   "kha yi sin a phwel",
+   true
+  ],
+  "ခရီးစီစဉ်သူက": [
+   "ခရီးစီစဉ်သူ",
+   "kha yi si sin thu",
+   true
+  ],
+  "ခရီးသွားက": [
+   "ခရီးသွား",
+   "kha yi thwar",
+   true
+  ],
+  "စက်ရုံအဖွဲ့က": [
+   "စက်ရုံအဖွဲ့",
+   "set yone a phwel",
+   true
+  ],
+  "စနစ်အုပ်ချုပ်သူက": [
+   "စနစ်အုပ်ချုပ်သူ",
+   "sa nit ote chote thu",
+   true
+  ],
+  "စမ်းသပ်သူက": [
+   "စမ်းသပ်သူ",
+   "san that thu",
+   true
+  ],
+  "စမ်းသပ်အဖွဲ့က": [
+   "စမ်းသပ်အဖွဲ့",
+   "san that a phwel",
+   true
+  ],
+  "စာချုပ်ပါတီက": [
+   "စာချုပ်ပါတီ",
+   "sar chote par ti",
+   true
+  ],
+  "စာရင်းကိုင်က": [
+   "စာရင်းကိုင်",
+   "sar yin kaing",
+   true
+  ],
+  "စာရေးသူက": [
+   "စာရေးသူ",
+   "sar yay thu",
+   true
+  ],
+  "စီမံကိန်းခေါင်းဆောင်က": [
+   "စီမံကိန်းခေါင်းဆောင်",
+   "si man kein khaung saung",
+   true
+  ],
+  "စီမံကိန်းအဖွဲ့က": [
+   "စီမံကိန်းအဖွဲ့",
+   "si man kein a phwel",
+   true
+  ],
+  "စီမံခန့်ခွဲမှုအဖွဲ့က": [
+   "စီမံခန့်ခွဲမှုအဖွဲ့",
+   "si man khan khwel hmu a phwel",
+   true
+  ],
+  "ဆက်သွယ်ရေးအဖွဲ့က": [
+   "ဆက်သွယ်ရေးအဖွဲ့",
+   "set thwel yay a phwel",
+   true
+  ],
+  "ဆရာက": [
+   "ဆရာ",
+   "sa yar",
+   true
+  ],
+  "ဆရာမက": [
+   "ဆရာမ",
+   "sa yar ma",
+   true
+  ],
+  "ဆရာဝန်က": [
+   "ဆရာဝန်",
+   "sa yar wan",
+   true
+  ],
+  "ဌာနက": [
+   "ဌာန",
+   "htar na",
+   true
+  ],
+  "တင်ပြသူက": [
+   "တင်ပြသူ",
+   "tin pya thu",
+   true
+  ],
+  "တည်းဖြတ်သူက": [
+   "တည်းဖြတ်သူ",
+   "ti phyat thu",
+   true
+  ],
+  "တာဝန်ခံက": [
+   "တာဝန်ခံ",
+   "tar wan khan",
+   true
+  ],
+  "တာဝန်ရှိသူက": [
+   "တာဝန်ရှိသူ",
+   "tar wan shi thu",
+   true
+  ],
+  "ထိန်းသိမ်းရေးအဖွဲ့က": [
+   "ထိန်းသိမ်းရေးအဖွဲ့",
+   "htein thein yay a phwel",
+   true
+  ],
+  "ဒီဇိုင်းအဖွဲ့က": [
+   "ဒီဇိုင်းအဖွဲ့",
+   "di zaing a phwel",
+   true
+  ],
+  "နည်းပညာရှင်က": [
+   "နည်းပညာရှင်",
+   "ni pa nyar shin",
+   true
+  ],
+  "နည်းပညာအဖွဲ့က": [
+   "နည်းပညာအဖွဲ့",
+   "ni pa nyar a phwel",
+   true
+  ],
+  "ပညာရှင်က": [
+   "ပညာရှင်",
+   "pa nyar shin",
+   true
+  ],
+  "ပရိုဂရမ်ရေးသူက": [
+   "ပရိုဂရမ်ရေးသူ",
+   "pa yo ga yan yay thu",
+   true
+  ],
+  "ပြောရေးဆိုခွင့်ရှိသူက": [
+   "ပြောရေးဆိုခွင့်ရှိသူ",
+   "pyaw yay so khwin shi thu",
+   true
+  ],
+  "ဖွံ့ဖြိုးရေးအဖွဲ့က": [
+   "ဖွံ့ဖြိုးရေးအဖွဲ့",
+   "phwan phyo yay a phwel",
+   true
+  ],
+  "ဘဏ္ဍာရေးအဖွဲ့က": [
+   "ဘဏ္ဍာရေးအဖွဲ့",
+   "ban dar yay a phwel",
+   true
+  ],
+  "မန်နေဂျာက": [
+   "မန်နေဂျာ",
+   "man nay gyar",
+   true
+  ],
+  "မိတ်ဆွေက": [
+   "မိတ်ဆွေ",
+   "meik sway",
+   true
+  ],
+  "မိတ်ဆွေတွေက": [
+   "မိတ်ဆွေတွေ",
+   "meik sway tway",
+   true
+  ],
+  "မိသားစုက": [
+   "မိသားစု",
+   "mi thar su",
+   true
+  ],
+  "မိသားစုဝင်က": [
+   "မိသားစုဝင်",
+   "mi thar su win",
+   true
+  ],
+  "ယာဉ်မောင်းက": [
+   "ယာဉ်မောင်း",
+   "yin maung",
+   true
+  ],
+  "ရင်းနှီးမြှုပ်နှံသူက": [
+   "ရင်းနှီးမြှုပ်နှံသူ",
+   "yin hni shote hnan thu",
+   true
+  ],
+  "ရောင်းချသူက": [
+   "ရောင်းချသူ",
+   "yaung cha thu",
+   true
+  ],
+  "လုပ်ငန်းရှင်က": [
+   "လုပ်ငန်းရှင်",
+   "lote ngan shin",
+   true
+  ],
+  "လုပ်ဖော်ကိုင်ဖက်တွေက": [
+   "လုပ်ဖော်ကိုင်ဖက်တွေ",
+   "lote phaw kaing phet tway",
+   true
+  ],
+  "လုံခြုံရေးအဖွဲ့က": [
+   "လုံခြုံရေးအဖွဲ့",
+   "lone chone yay a phwel",
+   true
+  ],
+  "လူငယ်က": [
+   "လူငယ်",
+   "lu ngel",
+   true
+  ],
+  "လူနာက": [
+   "လူနာ",
+   "lu nar",
+   true
+  ],
+  "လေ့ကျင့်ခန်းလုပ်သူက": [
+   "လေ့ကျင့်ခန်းလုပ်သူ",
+   "lay kyin khan lote thu",
+   true
+  ],
+  "လေ့လာရေးအဖွဲ့က": [
+   "လေ့လာရေးအဖွဲ့",
+   "lay lar yay a phwel",
+   true
+  ],
+  "လေ့လာသူက": [
+   "လေ့လာသူ",
+   "lay lar thu",
+   true
+  ],
+  "လျှောက်ထားသူက": [
+   "လျှောက်ထားသူ",
+   "shout htar thu",
+   true
+  ],
+  "ဝန်ထမ်းက": [
+   "ဝန်ထမ်း",
+   "wan htan",
+   true
+  ],
+  "ဝယ်ယူသူက": [
+   "ဝယ်ယူသူ",
+   "wel yu thu",
+   true
+  ],
+  "သုတေသနသူက": [
+   "သုတေသနသူ",
+   "thu tay tha na thu",
+   true
+  ],
+  "သုတေသနအဖွဲ့က": [
+   "သုတေသနအဖွဲ့",
+   "thu tay tha na a phwel",
+   true
+  ],
+  "သူ": [
+   "သူ",
+   "thu",
+   false
+  ],
+  "သူတို့": [
+   "သူတို့",
+   "thu to",
+   false
+  ],
+  "သူနာပြုက": [
+   "သူနာပြု",
+   "thu nar pyu",
+   true
+  ],
+  "သူမ": [
+   "သူမ",
+   "thu ma",
+   false
+  ],
+  "အကြောင်းအရာဖန်တီးသူက": [
+   "အကြောင်းအရာဖန်တီးသူ",
+   "a kyaung a yar phan ti thu",
+   true
+  ],
+  "အင်ဂျင်နီယာက": [
+   "အင်ဂျင်နီယာ",
+   "in gyin ni yar",
+   true
+  ],
+  "အစ်ကိုက": [
+   "အစ်ကို",
+   "it ko",
+   true
+  ],
+  "အစ်မက": [
+   "အစ်မ",
+   "it ma",
+   true
+  ],
+  "အတန်းသားတွေက": [
+   "အတန်းသားတွေ",
+   "a tan thar tway",
+   true
+  ],
+  "အတိုင်ပင်ခံက": [
+   "အတိုင်ပင်ခံ",
+   "a taing pin khan",
+   true
+  ],
+  "အတွေ့အကြုံရှိသူက": [
+   "အတွေ့အကြုံရှိသူ",
+   "a tway a kyone shi thu",
+   true
+  ],
+  "အဖွဲ့က": [
+   "အဖွဲ့",
+   "a phwel",
+   true
+  ],
+  "အဖွဲ့ခေါင်းဆောင်က": [
+   "အဖွဲ့ခေါင်းဆောင်",
+   "a phwel khaung saung",
+   true
+  ],
+  "အဖွဲ့ဝင်တွေက": [
+   "အဖွဲ့ဝင်တွေ",
+   "a phwel win tway",
+   true
+  ],
+  "အဖွဲ့အစည်းက": [
+   "အဖွဲ့အစည်း",
+   "a phwel a si",
+   true
+  ],
+  "အရည်အသွေးအဖွဲ့က": [
+   "အရည်အသွေးအဖွဲ့",
+   "a yi a thway a phwel",
+   true
+  ],
+  "အလုပ်ရှာသူက": [
+   "အလုပ်ရှာသူ",
+   "a lote shar thu",
+   true
+  ],
+  "အသုံးပြုသူက": [
+   "အသုံးပြုသူ",
+   "a thone pyu thu",
+   true
+  ],
+  "အုပ်ချုပ်ရေးအဖွဲ့က": [
+   "အုပ်ချုပ်ရေးအဖွဲ့",
+   "ote chote yay a phwel",
+   true
+  ],
+  "ဥပဒေအကြံပေးက": [
+   "ဥပဒေအကြံပေး",
+   "u pa day a kyan pay",
+   true
+  ],
+  "ဧည့်သည်က": [
+   "ဧည့်သည်",
+   "ay thi",
+   true
+  ]
+ },
+ "times": {
+  "ဒီတစ်ပတ်အတွင်း": "di tit pat a twin",
+  "ဒီနေ့": "di nay",
+  "နေ့တိုင်း": "nay taing",
+  "ပုံမှန်အားဖြင့်": "pone hman ar phyin",
+  "မကြာခဏ": "ma kyar kha na",
+  "လိုအပ်တဲ့အချိန်မှာ": "lo at tel a chein hmar",
+  "အခုတလော": "a khu ta law",
+  "အချိန်ရတဲ့အခါ": "a chein ya tel a khar",
+  "အလုပ်အားတဲ့အခါ": "a lote ar tel a khar",
+  "အားလပ်ချိန်မှာ": "ar lat chein hmar"
+ },
+ "conditions": {
+  "တတ်နိုင်သလောက်": "tat naing tha lout",
+  "လိုအပ်ရင်": "lo at yin",
+  "သေချာစဉ်းစားပြီး": "thay char sin sar pyi",
+  "အချိန်ရရင်": "a chein ya yin",
+  "အခြေအနေကြည့်ပြီး": "a chay a nay kyi pyi",
+  "အဆင်ပြေရင်": "a sin pyay yin",
+  "အရင်စီစဉ်ပြီး": "a yin si sin pyi"
+ },
+ "activities": {
+  "ကတိကိုထိန်း": "ka ti ko htein",
+  "ကိုယ့်ရည်မှန်းချက်ပြန်သုံးသပ်": "ko yi hman chet pyan thone that",
+  "ကိုယ်ပိုင်စည်းကမ်းတည်ဆောက်": "ko paing si kan ti sout",
+  "ကုဒ်ပြန်စစ်": "kote pyan sit",
+  "ကုန်ကျစရိတ်လျှော့ချ": "kone kya sa yeik shaw cha",
+  "ကုန်ပစ္စည်းသက်တမ်းစစ်": "kone pit si thet tan sit",
+  "ကျန်းမာရေးနဲ့ညီတဲ့အစားအစာရွေး": "kyan mar yay nel nyi tel a sar a sar yway",
+  "ကျန်းမာရေးမေး": "kyan mar yay may",
+  "ကျန်းမာရေးအခြေအနေမှတ်တမ်းတင်": "kyan mar yay a chay a nay hmat tan tin",
+  "ကျန်းမာရေးအစီအစဉ်ပြန်သုံးသပ်": "kyan mar yay a si a sin pyan thone that",
+  "ကျေးဇူးတင်စကားပြော": "kyay zu tin sa kar pyaw",
+  "ကျွမ်းကျင်မှုအသစ်သင်": "kywan kyin hmu a thit thin",
+  "ကွန်ရက်ချိတ်ဆက်မှုစစ်": "kun yet cheik set hmu sit",
+  "ခန္ဓာကိုယ်အပူချိန်တိုင်း": "khan dar ko a pu chein taing",
+  "ခရီးကုန်ကျစရိတ်တွက်": "kha yi kone kya sa yeik twet",
+  "ခရီးစဉ်စီစဉ်": "kha yi sin si sin",
+  "ခရီးဆောင်အိတ်ပြင်": "kha yi saung eik pyin",
+  "ခရီးသွားအာမခံစစ်": "kha yi thwar ar ma khan sit",
+  "ချိန်းဆိုမှုယူ": "chein so hmu yu",
+  "ချို့ယွင်းချက်ရှာ": "cho ywin chet shar",
+  "ခွင့်ပြုချက်စစ်": "khwin pyu chet sit",
+  "ခွင့်ပြုချက်တောင်း": "khwin pyu chet taung",
+  "ခွင့်ပြုထားတဲ့အသုံးပြုမှုစစ်": "khwin pyu htar tel a thone pyu hmu sit",
+  "ဂရပ်ဆွဲ": "ga yat swel",
+  "ငွေကြေးဆုံးဖြတ်ချက်ပြန်သုံးသပ်": "ngway kyay sone phyat chet pyan thone that",
+  "ငွေကြေးရည်မှန်းချက်သတ်မှတ်": "ngway kyay yi hman chet that hmat",
+  "ငွေတောင်းခံလွှာစစ်": "ngway taung khan hlwar sit",
+  "ငွေပေးချေမှုအတည်ပြု": "ngway pay chay hmu a ti pyu",
+  "ငွေလဲနှုန်းကြည့်": "ngway lel hnone kyi",
+  "ငွေသားစီးဆင်းမှုစစ်": "ngway thar si sin hmu sit",
+  "စကားလုံးအသုံးအနှုန်းပြင်": "sa kar lone a thone a hnone pyin",
+  "စကားဝှက်ပြောင်း": "sa kar hwet pyaung",
+  "စက်ပစ္စည်းစမ်း": "set pit si san",
+  "စစ်ဆေးမှုရလဒ်ပြန်ကြည့်": "sit say hmu ya lat pyan kyi",
+  "စည်းမျဉ်းဖတ်": "si myin phat",
+  "စနစ်စွမ်းဆောင်ရည်တိုင်း": "sa nit swan saung yi taing",
+  "စနစ်ပြန်စ": "sa nit pyan sa",
+  "စနစ်လိုအပ်ချက်သတ်မှတ်": "sa nit lo at chet that hmat",
+  "စနစ်အတည်ပြုစမ်းသပ်": "sa nit a ti pyu san that",
+  "စမ်းသပ်ခန်းအတွက်ပြင်ဆင်": "san that khan a twet pyin sin",
+  "စမ်းသပ်မှုဒီဇိုင်းဆွဲ": "san that hmu di zaing swel",
+  "စမ်းသပ်မှုလုပ်": "san that hmu lote",
+  "စာကြည့်တိုက်သွား": "sar kyi tike thwar",
+  "စာချုပ်အချက်အလက်ပြန်ကြည့်": "sar chote a chet a let pyan kyi",
+  "စာတမ်းတွေဖတ်": "sar tan tway phat",
+  "စာမေးပွဲအတွက်လေ့ကျင့်": "sar may pwel a twet lay kyin",
+  "စာရင်းပိတ်": "sar yin peik",
+  "စာရွက်စာတမ်းတင်": "sar ywet sar tan tin",
+  "စာရွက်စာတမ်းပြင်": "sar ywet sar tan pyin",
+  "စာလုံးပေါင်းစစ်": "sar lone paung sit",
+  "စာအုပ်တွေစီ": "sar ote tway si",
+  "စားစရာမှာ": "sar sa yar hmar",
+  "စားပွဲရှင်း": "sar pwel shin",
+  "စားသောက်ဆိုင်ရွေး": "sar thout saing yway",
+  "စားသောက်ဆိုင်သွား": "sar thout saing thwar",
+  "စိတ်ဖိစီးမှုလျှော့": "seik phi si hmu shaw",
+  "စိတ်ရှည်ရှည်နဲ့လေ့လာ": "seik shi shi nel lay lar",
+  "စီမံကိန်းရည်မှန်းချက်သတ်မှတ်": "si man kein yi hman chet that hmat",
+  "စီမံကိန်းရလဒ်ပြန်သုံးသပ်": "si man kein ya lat pyan thone that",
+  "စျေးကွက်အခြေအနေသုံးသပ်": "say kwet a chay a nay thone that",
+  "စွမ်းဆောင်ရည်တိုင်း": "swan saung yi taing",
+  "ဆက်သွယ်မှုမပြတ်အောင်လုပ်": "set thwel hmu ma pyat aung lote",
+  "ဆက်သွယ်ရေးအစီအစဉ်ချ": "set thwel yay a si a sin cha",
+  "ဆရာကိုမေး": "sa yar ko may",
+  "ဆရာဝန်နဲ့တိုင်ပင်": "sa yar wan nel taing pin",
+  "ဆာဗာအခြေအနေကြည့်": "sar bar a chay a nay kyi",
+  "ဆီလျှော့စား": "si shaw sar",
+  "ဆုံးဖြတ်ချက်မှတ်တမ်းတင်": "sone phyat chet hmat tan tin",
+  "ဆုံးဖြတ်ချက်ရဲ့အကျိုးဆက်စဉ်းစား": "sone phyat chet yel a kyo set sin sar",
+  "ဆော့ဖ်ဝဲအဆင့်မြှင့်": "sa wel a sin shin",
+  "ဆေးချိန်မှန်သောက်": "say chein hman thout",
+  "ဆွေးနွေးချက်အကျဉ်းချုပ်": "sway nway chet a kyin chote",
+  "ဈေးနှုန်းနှိုင်းယှဉ်": "zay hnone hnaing shin",
+  "ဈေးနှုန်းသတ်မှတ်": "zay hnone that hmat",
+  "ဈေးဝယ်": "zay wel",
+  "ညစာစား": "nya sar sar",
+  "တင်ပြချက်ပြင်ဆင်": "tin pya chet pyin sin",
+  "တင်ပြချက်ပြင်": "tin pya chet pyin",
+  "တရားဝင်အသိပေးချက်ရေး": "ta yar win a thi pay chet yay",
+  "တရားဝင်အသိပေးစာဖတ်": "ta yar win a thi pay sar phat",
+  "တာဝန်ခွဲ": "tar wan khwel",
+  "တာဝန်နဲ့အခွင့်အရေးခွဲခြား": "tar wan nel a khwin a yay khwel char",
+  "တိုင်းတာမှုလုပ်": "taing tar hmu lote",
+  "တိုးတက်မှုကိုတိုင်းတာ": "to tet hmu ko taing tar",
+  "တိုးတက်မှုတိုင်း": "to tet hmu taing",
+  "တိုးတက်မှုအစီရင်ခံ": "to tet hmu a si yin khan",
+  "တုန်ခါမှုတိုင်း": "tone khar hmu taing",
+  "တုံ့ပြန်ချက်စု": "tone pyan chet su",
+  "တောင်းဆိုချက်တင်": "taung so chet tin",
+  "တောင်းပန်": "taung pan",
+  "တွက်ချက်မှုစစ်": "twet chet hmu sit",
+  "တွေ့ဆုံဖို့ချိန်း": "tway sone pho chein",
+  "ထပ်မံစမ်းသပ်": "htat man san that",
+  "ထမင်းချက်": "hta min chet",
+  "ထိန်းချုပ်စနစ်စမ်း": "htein chote sa nit san",
+  "ထွက်ခွာချိန်စစ်": "htwet khwar chein sit",
+  "ဒီဇိုင်းပြန်လည်ပြင်ဆင်": "di zaing pyan li pyin sin",
+  "ဒေတာစု": "day tar su",
+  "ဒေတာသန့်စင်": "day tar than sin",
+  "ဒေတာအရည်အသွေးစစ်": "day tar a yi a thway sit",
+  "ဒေသဆိုင်ရာစည်းမျဉ်းဖတ်": "day tha saing yar si myin phat",
+  "နည်းပညာစာရွက်စာတမ်းရေး": "ni pa nyar sar ywet sar tan yay",
+  "နည်းပညာမှတ်တမ်းရေး": "ni pa nyar hmat tan yay",
+  "နည်းလမ်းပိုင်းပြန်သုံးသပ်": "ni lan paing pyan thone that",
+  "နာကျင်မှုအခြေအနေစောင့်ကြည့်": "nar kyin hmu a chay a nay saung kyi",
+  "နားလည်လွယ်အောင်ပြော": "nar li lwel aung pyaw",
+  "နားလည်အောင်ရှင်းပြ": "nar li aung shin pya",
+  "နိဂုံးချုပ်ရေး": "ni gone chote yay",
+  "နိုင်ငံကူးလက်မှတ်စစ်": "naing ngan ku let hmat sit",
+  "နောက်ဆုံးရက်စစ်": "nout sone yet sit",
+  "နောက်ဆုံးရက်ပြန်ညှိ": "nout sone yet pyan hnyi",
+  "နောက်ဆုံးရက်လိုက်နာ": "nout sone yet like nar",
+  "နောက်တစ်ဆင့်အတွက်ကိုယ့်ကိုယ်ကိုပြင်ဆင်": "nout tit sin a twet ko ko ko pyin sin",
+  "နောက်တစ်ဆင့်အတွက်အစီအစဉ်ချ": "nout tit sin a twet a si a sin cha",
+  "နောက်နေ့အတွက်ပြင်ဆင်": "nout nay a twet pyin sin",
+  "နေ့စဉ်အစီအစဉ်ပြန်ကြည့်": "nay sin a si a sin pyan kyi",
+  "နေ့လယ်စာစား": "nay lel sar sar",
+  "ပစ္စည်းတွေစီ": "pit si tway si",
+  "ပစ္စည်းရွေး": "pit si yway",
+  "ပရိသတ်လိုအပ်ချက်စဉ်းစား": "pa yi that lo at chet sin sar",
+  "ပုံကြမ်းဆွဲ": "pone kyan swel",
+  "ပျက်နေတဲ့ပစ္စည်းပြင်": "pyet nay tel pit si pyin",
+  "ပြန်ခရီးအတွက်ပြင်ဆင်": "pyan kha yi a twet pyin sin",
+  "ပြန်လည်သက်သာမှုကိုစောင့်ကြည့်": "pyan li thet thar hmu ko saung kyi",
+  "ပြုပြင်ထိန်းသိမ်းမှုလုပ်": "pyu pyin htein thein hmu lote",
+  "ပြောင်းလဲမှုတောင်းဆိုချက်စစ်": "pyaung lel hmu taung so chet sit",
+  "ပြဿနာကိုပြန်လည်ဖန်တီး": "pya th nar ko pyan li phan ti",
+  "ပြဿနာကိုအမြစ်ကစစ်": "pya th nar ko a myit ka sit",
+  "ဖိုင်တွေစနစ်တကျသိမ်း": "phaing tway sa nit ta kya thein",
+  "ဖိုင်အရန်ကူး": "phaing a yan ku",
+  "ဖုန်းဆက်": "phone set",
+  "ဖုန်းအားသွင်း": "phone ar thwin",
+  "ဖောက်သည်နဲ့ဆက်သွယ်": "phout thi nel set thwel",
+  "ဖောက်သည်လိုအပ်ချက်လေ့လာ": "phout thi lo at chet lay lar",
+  "ဖြေကြားချက်မှတ်တမ်းတင်": "phyay kyar chet hmat tan tin",
+  "ဖြေရှင်းချက်အတည်ပြု": "phyay shin chet a ti pyu",
+  "ဘဏ္ဍာရေးအန္တရာယ်သုံးသပ်": "ban dar yay an ta yel thone that",
+  "ဘတ်ဂျက်ပြင်ဆင်": "bat gyet pyin sin",
+  "မက်ဆေ့ချ်ရေး": "met say cha yay",
+  "မတူညီတဲ့အမြင်ကိုနားထောင်": "ma tu nyi tel a myin ko nar htaung",
+  "မတူညီတဲ့အမြင်ကိုသုံးသပ်": "ma tu nyi tel a myin ko thone that",
+  "မနက်စာစား": "ma net sar sar",
+  "မသေချာမှုသုံးသပ်": "ma thay char hmu thone that",
+  "မိတ်ဆွေကိုဖုန်းဆက်": "meik sway ko phone set",
+  "မိသားစုကိုကူညီ": "mi thar su ko ku nyi",
+  "မိသားစုနဲ့စကားပြော": "mi thar su nel sa kar pyaw",
+  "မီးဖိုချောင်ရှင်း": "mi pho chaung shin",
+  "မူဝါဒစစ်": "mu war da sit",
+  "မေးခွန်းတွေဖြေ": "may khun tway phyay",
+  "မေးခွန်းဖြေ": "may khun phyay",
+  "မွေးနေ့ဆုတောင်း": "mway nay su taung",
+  "မှတ်စုရေး": "hmat su yay",
+  "မှတ်ပုံတင်အချက်အလက်စစ်": "hmat pone tin a chet a let sit",
+  "ယူဆချက်ကိုစမ်းသပ်": "yu sa chet ko san that",
+  "ယူဆချက်ရေး": "yu sa chet yay",
+  "ရင်းနှီးမြှုပ်နှံမှုရွေးချယ်စရာနှိုင်းယှဉ်": "yin hni shote hnan hmu yway chel sa yar hnaing shin",
+  "ရလဒ်ကိုတိုင်းတာ": "ya lat ko taing tar",
+  "ရလဒ်ကိုအရင်သုတေသနနဲ့နှိုင်းယှဉ်": "ya lat ko a yin thu tay tha na nel hnaing shin",
+  "ရလဒ်ခွဲခြမ်းစိတ်ဖြာ": "ya lat khwel chan seik phyar",
+  "ရလာဒ်ကိုပြန်လည်သုံးသပ်": "ya lat ko pyan li thone that",
+  "ရာသီဥတုစစ်": "yar thi u tu sit",
+  "ရေချိုး": "yay cho",
+  "ရေများများသောက်": "yay myar myar thout",
+  "ရေရှည်အစီအစဉ်ချ": "yay shi a si a sin cha",
+  "ရောက်ရှိချိန်တွက်": "yout shi chein twet",
+  "ရောင်းအားခန့်မှန်း": "yaung ar khan hman",
+  "လက်မှတ်ဝယ်": "let hmat wel",
+  "လည်ပတ်စရာနေရာရှာ": "li pat sa yar nay yar shar",
+  "လမ်းကြောင်းစစ်": "lan kyaung sit",
+  "လမ်းလျှောက်": "lan shout",
+  "လိုအပ်တဲ့စာရွက်စာတမ်းပြင်": "lo at tel sar ywet sar tan pyin",
+  "လုပ်ငန်းစဉ်တိုးတက်အောင်လုပ်": "lote ngan sin to tet aung lote",
+  "လုပ်ငန်းနယ်ပယ်သတ်မှတ်": "lote ngan nel pel that hmat",
+  "လုပ်ငန်းအမြတ်နှုန်းသုံးသပ်": "lote ngan a myat hnone thone that",
+  "လုပ်ငန်းဦးစားပေးသတ်မှတ်": "lote ngan u sar pay that hmat",
+  "လုပ်ဆောင်ရမယ့်အချက်တွေသတ်မှတ်": "lote saung ya mel a chet tway that hmat",
+  "လုံခြုံရေးစစ်": "lone chone yay sit",
+  "လုံခြုံရေးအန္တရာယ်သုံးသပ်": "lone chone yay an ta yel thone that",
+  "လေ့ကျင့်ခန်းထပ်လုပ်": "lay kyin khan htat lote",
+  "လေ့ကျင့်ခန်းလုပ်": "lay kyin khan lote",
+  "လျှပ်စစ်ချိတ်ဆက်မှုစစ်": "shat sit cheik set hmu sit",
+  "လျှို့ဝှက်အချက်အလက်ကာကွယ်": "sho hwet a chet a let kar kwel",
+  "လျှောက်လွှာဖြည့်": "shout hlwar phyi",
+  "ဝင်ငွေထွက်ငွေတွက်": "win ngway htwet ngway twet",
+  "သက်ဆိုင်ရာဌာနကိုဆက်သွယ်": "thet saing yar htar na ko set thwel",
+  "သက်ဆိုင်သူတွေနဲ့ညှိနှိုင်း": "thet saing thu tway nel hnyi hnaing",
+  "သက်သေအထောက်အထားအရည်အသွေးစစ်": "thet thay a htout a htar a yi a thway sit",
+  "သင်ခန်းစာပြန်ဖတ်": "thin khan sar pyan phat",
+  "သင်ယူမှုရလဒ်ကိုပြန်သုံးသပ်": "thin yu hmu ya lat ko pyan thone that",
+  "သတင်းမေး": "tha tin may",
+  "သတင်းမှားမဖြစ်အောင်စစ်": "tha tin hmar ma phyit aung sit",
+  "သတင်းအချက်အလက်မှန်ကန်မှုစစ်": "tha tin a chet a let hman kan hmu sit",
+  "သဘောတူညီချက်အတည်ပြု": "tha baw tu nyi chet a ti pyu",
+  "သယ်ယူပို့ဆောင်ရေးရွေး": "thel yu po saung yay yway",
+  "သုတေသနစာတမ်းဖတ်": "thu tay tha na sar tan phat",
+  "သုတေသနမေးခွန်းသတ်မှတ်": "thu tay tha na may khun that hmat",
+  "သူငယ်ချင်းနဲ့တွေ့": "thu ngel chin nel tway",
+  "သောက်စရာဝယ်": "thout sa yar wel",
+  "သွေးပေါင်ချိန်စစ်": "thway paung chein sit",
+  "ဟင်းချက်": "hin chet",
+  "ဟင်းသီးဟင်းရွက်ပိုစား": "hin thi hin ywet po sar",
+  "ဟိုတယ်ဘွတ်ကင်လုပ်": "ho tel but kin lote",
+  "အကန့်အသတ်တွေဖော်ပြ": "a kan a that tway phaw pya",
+  "အကူအညီတောင်း": "a ku a nyi taung",
+  "အကူအညီပေး": "a ku a nyi pay",
+  "အကြောင်းပြန်": "a kyaung pyan",
+  "အကြောင်းရင်းအမြစ်ခွဲခြမ်းစိတ်ဖြာ": "a kyaung yin a myit khwel chan seik phyar",
+  "အကြောင်းအရာကိုနားလည်အောင်လေ့လာ": "a kyaung a yar ko nar li aung lay lar",
+  "အကြောင်းအရာတည်းဖြတ်": "a kyaung a yar ti phyat",
+  "အကြံဉာဏ်တောင်း": "a kyan nyan taung",
+  "အကြံဉာဏ်ပေး": "a kyan nyan pay",
+  "အကြံပြုချက်စု": "a kyan pyu chet su",
+  "အကြွေးပမာဏစစ်": "a kyway pa mar na sit",
+  "အခန်းလေဝင်လေထွက်ကောင်းအောင်လုပ်": "a khan lay win lay htwet kaung aung lote",
+  "အခန်းသန့်ရှင်း": "a khan than shin",
+  "အချက်အလက်ကာကွယ်": "a chet a let kar kwel",
+  "အချက်အလက်မှန်ကန်မှုအတည်ပြု": "a chet a let hman kan hmu a ti pyu",
+  "အချက်အလက်သိမ်းဆည်း": "a chet a let thein si",
+  "အချက်အလက်အကျဉ်းချုပ်": "a chet a let a kyin chote",
+  "အချက်အလက်အပေါ်အခြေခံဆုံးဖြတ်": "a chet a let a paw a chay khan sone phyat",
+  "အချိန်ကိုဦးစားပေးသုံး": "a chein ko u sar pay thone",
+  "အချိန်ဇယားချ": "a chein za yar cha",
+  "အချိန်ဇယားဆွဲ": "a chein za yar swel",
+  "အချိန်ဇယားပြန်ညှိ": "a chein za yar pyan hnyi",
+  "အချိုလျှော့စား": "a cho shaw sar",
+  "အခွန်စာရွက်စာတမ်းပြင်": "a khun sar ywet sar tan pyin",
+  "အငြင်းပွားမှုဖြေရှင်း": "a ngyin pwar hmu phyay shin",
+  "အစည်းအဝေးတက်": "a si a way tet",
+  "အစည်းအဝေးအကျဉ်းချုပ်ရေး": "a si a way a kyin chote yay",
+  "အစားအစာပမာဏထိန်း": "a sar a sar pa mar na htein",
+  "အစားအစာသိမ်းဆည်း": "a sar a sar thein si",
+  "အစားအသောက်ထိန်း": "a sar a thout htein",
+  "အစားအသောက်ပြင်ဆင်": "a sar a thout pyin sin",
+  "အစိတ်အပိုင်းတိုင်း": "a seik a paing taing",
+  "အစီရင်ခံစာရေး": "a si yin khan sar yay",
+  "အတန်းတက်": "a tan tet",
+  "အတားအဆီးဖော်ထုတ်": "a tar a si phaw htote",
+  "အတူတူအချိန်ဖြုန်း": "a tu tu a chein phyone",
+  "အတွေ့အကြုံကနေသင်ယူ": "a tway a kyone ka nay thin yu",
+  "အထောက်အထားပူးတွဲ": "a htout a htar pu twel",
+  "အဓိကအချက်ကိုရှင်းပြ": "a di ka a chet ko shin pya",
+  "အဓိပ္ပာယ်မလွဲအောင်ပြန်ဖတ်": "a deik pel ma lwel aung pyan phat",
+  "အနာဂတ်သုတေသနအကြံပြု": "a nar gat thu tay tha na a kyan pyu",
+  "အနားယူ": "a nar yu",
+  "အန္တရာယ်စာရင်းပြင်": "an ta yel sar yin pyin",
+  "အန္တရာယ်နဲ့အကျိုးကျေးဇူးချိန်ဆ": "an ta yel nel a kyo kyay zu chein sa",
+  "အပူချိန်စောင့်ကြည့်": "a pu chein saung kyi",
+  "အပြောင်းအလဲမှတ်တမ်းတင်": "a pyaung a lel hmat tan tin",
+  "အဖွဲ့လိုက်ဆွေးနွေး": "a phwel like sway nway",
+  "အဖွဲ့ဝင်တွေကိုအကြောင်းကြား": "a phwel win tway ko a kyaung kyar",
+  "အဖွဲ့ဝင်တွေနဲ့တာဝန်ခွဲ": "a phwel win tway nel tar wan khwel",
+  "အဖွဲ့အခြေအနေမေး": "a phwel a chay a nay may",
+  "အမြတ်အစွန်းတွက်": "a myat a sun twet",
+  "အမှားကိုလက်ခံပြီးပြင်": "a hmar ko let khan pyi pyin",
+  "အမှားတွေပြန်စစ်": "a hmar tway pyan sit",
+  "အမှားမှတ်တမ်းဖတ်": "a hmar hmat tan phat",
+  "အမှားအယွင်းတွက်": "a hmar a ywin twet",
+  "အမှိုက်ပစ်": "a hmike pit",
+  "အယူခံစာပြင်": "a yu khan sar pyin",
+  "အယူအဆတွေချိတ်ဆက်": "a yu a sa tway cheik set",
+  "အရင်းအနှီးအသုံးချမှုစစ်": "a yin a hni a thone cha hmu sit",
+  "အရင်းအမြစ်ကိုကိုးကား": "a yin a myit ko ko kar",
+  "အရင်းအမြစ်ခွဲဝေ": "a yin a myit khwel way",
+  "အရင်းအမြစ်စစ်ဆေး": "a yin a myit sit say",
+  "အရင်းအမြစ်ရှာ": "a yin a myit shar",
+  "အရည်အသွေးစစ်": "a yi a thway sit",
+  "အရည်အသွေးစံစစ်": "a yi a thway san sit",
+  "အရည်အသွေးစံသတ်မှတ်": "a yi a thway san that hmat",
+  "အရေးပေါ်ဆက်သွယ်ရန်အချက်အလက်သိမ်း": "a yay paw set thwel yan a chet a let thein",
+  "အလုပ်စာရင်းပြန်စစ်": "a lote sar yin pyan sit",
+  "အလုပ်တာဝန်ခွဲ": "a lote tar wan khwel",
+  "အလုပ်ပြီးဆုံးမှုကိုအတည်ပြု": "a lote pyi sone hmu ko a ti pyu",
+  "အလုပ်အကိုင်ရွေးချယ်စရာနှိုင်းယှဉ်": "a lote a kaing yway chel sa yar hnaing shin",
+  "အလေ့အကျင့်ကောင်းဖန်တီး": "a lay a kyin kaung phan ti",
+  "အလေးချိန်မှတ်တမ်းတင်": "a lay chein hmat tan tin",
+  "အဝတ်လျှော်": "a wat shaw",
+  "အဝတ်အစားရွေး": "a wat a sar yway",
+  "အသက်ရှူလေ့ကျင့်ခန်းလုပ်": "a thet shu lay kyin khan lote",
+  "အသီးအနှံစား": "a thi a hnan sar",
+  "အသုံးစရိတ်စာရင်းပြန်စစ်": "a thone sa yeik sar yin pyan sit",
+  "အသုံးပြုသူတုံ့ပြန်ချက်စု": "a thone pyu thu tone pyan chet su",
+  "အာရုံခံကိရိယာစစ်": "ar yone khan ki yi yar sit",
+  "အားနည်းချက်တွေပြင်": "ar ni chet tway pyin",
+  "အားနည်းမှုရှိမရှိကြည့်": "ar ni hmu shi ma shi kyi",
+  "အားသာချက်တွေဖော်ထုတ်": "ar thar chet tway phaw htote",
+  "အိပ်ချိန်ပြည့်အောင်အိပ်": "eik chein pyi aung eik",
+  "အိပ်ရာသိမ်း": "eik yar thein",
+  "အိမ်စာပြီးအောင်လုပ်": "ein sar pyi aung lote",
+  "အိမ်တံခါးစစ်": "ein tan khar sit",
+  "အိမ်သန့်ရှင်းရေးလုပ်": "ein than shin yay lote",
+  "အိမ်သုံးပစ္စည်းတွေစစ်": "ein thone pit si tway sit",
+  "အိမ်အတွက်လိုတာဝယ်": "ein a twet lo tar wel",
+  "အီးမေးလ်ပို့": "i man po",
+  "အီးမေးလ်အကြောင်းပြန်": "i man a kyaung pyan",
+  "အောင်မြင်မှုညွှန်းကိန်းတိုင်း": "aung myin hmu hnyun kein taing",
+  "ဦးစားပေးအဆင့်သတ်မှတ်": "u sar pay a sin that hmat"
+ }
+}
